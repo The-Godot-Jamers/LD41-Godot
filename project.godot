@@ -10,7 +10,8 @@ config_version=3
 
 [application]
 
-config/name="Godot game jammers"
+config/name="GGJ LD41"
+run/main_scene="res://objects/main.tscn"
 config/icon="res://icon.png"
 
 [rendering]
