@@ -2,7 +2,7 @@
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 
-[node name="menu" type="CanvasLayer" index="0"]
+[node name="menu" type="CanvasLayer"]
 
 pause_mode = 2
 layer = 1
@@ -26,52 +26,16 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Anchor", "Margin", "Visibility" ]
 
-[node name="ViewportContainer" type="ViewportContainer" parent="ui" index="0"]
+[node name="CenterContainer" type="CenterContainer" parent="ui" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 8.0
-margin_right = 1024.0
-margin_bottom = 600.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-stretch = false
-stretch_shrink = 1
-_sections_unfolded = [ "Focus" ]
-
-[node name="MarginContainer" type="MarginContainer" parent="ui/ViewportContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 20.0
+margin_left = 36.0
 margin_top = 20.0
-margin_right = -20.0
-margin_bottom = -20.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Margin" ]
-
-[node name="CenterContainer" type="CenterContainer" parent="ui/ViewportContainer/MarginContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 8.0
-margin_right = 976.0
-margin_bottom = 560.0
+margin_right = 1004.0
+margin_bottom = 580.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -81,7 +45,7 @@ size_flags_vertical = 1
 use_top_left = false
 _sections_unfolded = [ "Rect" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ui/ViewportContainer/MarginContainer/CenterContainer" index="0"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ui/CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -99,7 +63,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="CenterContainer3" type="CenterContainer" parent="ui/ViewportContainer/MarginContainer/CenterContainer/VBoxContainer" index="0"]
+[node name="CenterContainer3" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -114,12 +78,10 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="start" type="TextureButton" parent="ui/ViewportContainer/MarginContainer/CenterContainer/VBoxContainer/CenterContainer3" index="0"]
+[node name="start" type="TextureButton" parent="ui/CenterContainer/VBoxContainer/CenterContainer3" index="0"]
 
+modulate = Color( 0.0880127, 0.402344, 0, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -142,9 +104,9 @@ texture_pressed = ExtResource( 1 )
 texture_hover = ExtResource( 1 )
 texture_disabled = ExtResource( 1 )
 texture_focused = ExtResource( 1 )
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Textures", "Visibility" ]
 
-[node name="Label" type="Label" parent="ui/ViewportContainer/MarginContainer/CenterContainer/VBoxContainer/CenterContainer3" index="1"]
+[node name="Label" type="Label" parent="ui/CenterContainer/VBoxContainer/CenterContainer3" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -166,11 +128,8 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CenterContainer2" type="CenterContainer" parent="ui/ViewportContainer/MarginContainer/CenterContainer/VBoxContainer" index="1"]
+[node name="CenterContainer2" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -186,12 +145,10 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="options" type="TextureButton" parent="ui/ViewportContainer/MarginContainer/CenterContainer/VBoxContainer/CenterContainer2" index="0"]
+[node name="options" type="TextureButton" parent="ui/CenterContainer/VBoxContainer/CenterContainer2" index="0"]
 
+modulate = Color( 0, 0.345428, 0.574219, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -214,9 +171,9 @@ texture_pressed = ExtResource( 1 )
 texture_hover = ExtResource( 1 )
 texture_disabled = ExtResource( 1 )
 texture_focused = ExtResource( 1 )
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Textures", "Visibility" ]
 
-[node name="Label" type="Label" parent="ui/ViewportContainer/MarginContainer/CenterContainer/VBoxContainer/CenterContainer2" index="1"]
+[node name="Label" type="Label" parent="ui/CenterContainer/VBoxContainer/CenterContainer2" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -238,11 +195,8 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CenterContainer" type="CenterContainer" parent="ui/ViewportContainer/MarginContainer/CenterContainer/VBoxContainer" index="2"]
+[node name="CenterContainer" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -258,12 +212,10 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="quit" type="TextureButton" parent="ui/ViewportContainer/MarginContainer/CenterContainer/VBoxContainer/CenterContainer" index="0"]
+[node name="quit" type="TextureButton" parent="ui/CenterContainer/VBoxContainer/CenterContainer" index="0"]
 
+modulate = Color( 1, 0.0703125, 0.0703125, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -285,9 +237,9 @@ texture_normal = ExtResource( 1 )
 texture_pressed = ExtResource( 1 )
 texture_hover = ExtResource( 1 )
 stretch_mode = 4
-_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
+_sections_unfolded = [ "Mouse", "Rect", "Textures", "Visibility" ]
 
-[node name="Label" type="Label" parent="ui/ViewportContainer/MarginContainer/CenterContainer/VBoxContainer/CenterContainer" index="1"]
+[node name="Label" type="Label" parent="ui/CenterContainer/VBoxContainer/CenterContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -309,8 +261,5 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
-__meta__ = {
-"_edit_lock_": true
-}
 
 
