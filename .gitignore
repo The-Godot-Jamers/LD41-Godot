@@ -1,2 +1,11 @@
 # Godot-specific ignores
-.import/
+*.import
+export.cfg
+export_presets.cfg
+
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+
