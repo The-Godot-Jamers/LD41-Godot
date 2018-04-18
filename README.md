@@ -1,4 +1,6 @@
 # LD41 Godot
+
+## LICENSE
 #MIT from https://opensource.org/licenses/MIT
 #Copyright <2018> <COPYRIGHT HOLDERS TBA (TO BE ANNOUNCED after Ludam Dare 41): The Godot Jammers>
 
