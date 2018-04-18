@@ -1,6 +1,6 @@
 # LD41 Godot
 #MIT from https://opensource.org/licenses/MIT
-#Copyright <2018> <COPYRIGHT HOLDERS TBA (TO BE ANNOUNCED after Ludam Dare): The Godot Jammers>
+#Copyright <2018> <COPYRIGHT HOLDERS TBA (TO BE ANNOUNCED after Ludam Dare 41): The Godot Jammers>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
