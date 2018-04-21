@@ -19,6 +19,8 @@ func spawn_deck(cards):
 		card_instance.translation.y+=x*0.1
 		card_instance.flip()
 	position_cards(cards)
+	
+
 func position_cards(cards):
 	var p=get_points_within_circle_rect(cards,$CardLaybed/Area/CollisionShape.shape.radius)
 	for x in cards:
@@ -27,6 +29,7 @@ func position_cards(cards):
 		c.tweennode.start()
 		#c.translation=Vector3(p[x].x,0,p[x].y)
 	
+
 func get_points_within_circle_rect( npoints, radius ):
     if npoints == 1:
         return [Vector2()]

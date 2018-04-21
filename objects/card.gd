@@ -1,15 +1,9 @@
 extends Spatial
-
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 var tweennode
-var is_flipped = true
- 
+var is_flipped = false
+
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	tweennode=$Tween
+	tweennode = $Tween
 
 func flip():
 	$Area/MeshInstance/AnimationPlayer.play("flip")
@@ -19,11 +13,14 @@ func flip_back():
 
 func _on_Area_input_event(camera, event, click_position, click_normal, shape_idx):
 	if event is InputEventMouseButton:
-		if is_flipped:
-			flip_back()
+		if $Area/MeshInstance/AnimationPlayer.is_playing():
+			pass
 		else:
-			flip()
-		is_flipped = !is_flipped
+			if is_flipped:
+				flip() #sounds wrong way but its not
+			else:
+				flip_back() #sounds wrong way but its not
+			is_flipped = !is_flipped
 
 
 func _on_Area_mouse_entered():

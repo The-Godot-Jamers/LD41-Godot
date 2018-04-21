@@ -60,7 +60,7 @@ _sections_unfolded = [ "Albedo", "Clearcoat", "Metallic", "Parameters", "Roughne
 [sub_resource type="CubeMesh" id=2]
 
 material = SubResource( 1 )
-size = Vector3( 2, 0.05, 3 )
+size = Vector3( 1, 0.025, 1.5 )
 subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
@@ -195,9 +195,11 @@ tracks/3/keys = {
 "values": [ Vector3( -90, 0, 0 ), Vector3( -90, 0, 0 ), Vector3( -90, 0, 0 ), Vector3( -90, 0, 0 ), Vector3( -90, 0, 0 ) ]
 }
 
-[sub_resource type="ConvexPolygonShape" id=7]
+[sub_resource type="BoxShape" id=7]
 
-points = PoolVector3Array( -1, 0.0249939, 1.5, 1, 0.0249939, -1.5, 1, 0.0249939, 1.5, -1, 0.0249939, -1.5, -1, -0.0249939, 1.5, 1, -0.0249939, -1.5, 1, -0.0249939, 1.5, -1, -0.0249939, -1.5, 1, 0.0249939, 1.5, -1, 0.0249939, -1.5, 1, 0.0249939, -1.5, -1, 0.0249939, 1.5, 1, -0.0249939, 1.5, -1, -0.0249939, -1.5, 1, -0.0249939, -1.5, -1, -0.0249939, 1.5, 1, 0.0249939, 1.5, -1, -0.0249939, 1.5, -1, 0.0249939, 1.5, 1, -0.0249939, 1.5, 1, 0.0249939, -1.5, -1, -0.0249939, -1.5, -1, 0.0249939, -1.5, 1, -0.0249939, -1.5 )
+resource_local_to_scene = true
+extents = Vector3( 0.5, 0.025, 0.75 )
+_sections_unfolded = [ "Resource" ]
 
 [node name="card" type="Spatial" index="0"]
 
@@ -206,7 +208,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Area" type="Area" parent="." index="0"]
 
-transform = Transform( 0.439086, 0, 0, 0, 0.439086, 0, 0, 0, 0.439086, 0, 0, 0 )
 input_ray_pickable = true
 input_capture_on_drag = true
 space_override = 0
@@ -227,6 +228,7 @@ reverb_bus_enable = false
 reverb_bus_name = "Master"
 reverb_bus_amount = 0.0
 reverb_bus_uniformity = 0.0
+_sections_unfolded = [ "Transform" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="Area" index="0"]
 
@@ -291,6 +293,7 @@ blend_times = [  ]
 
 shape = SubResource( 7 )
 disabled = false
+_sections_unfolded = [ "Transform" ]
 
 [node name="Tween" type="Tween" parent="." index="1"]
 
