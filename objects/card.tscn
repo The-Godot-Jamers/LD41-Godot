@@ -15,8 +15,8 @@ flags_fixed_size = false
 flags_albedo_tex_force_srgb = false
 vertex_color_use_as_albedo = false
 vertex_color_is_srgb = false
-params_diffuse_mode = 0
-params_specular_mode = 0
+params_diffuse_mode = 4
+params_specular_mode = 3
 params_blend_mode = 0
 params_cull_mode = 0
 params_depth_draw_mode = 0
@@ -25,7 +25,7 @@ params_point_size = 1.0
 params_billboard_mode = 0
 params_grow = false
 params_use_alpha_scissor = false
-albedo_color = Color( 0.546875, 0.546875, 0.546875, 1 )
+albedo_color = Color( 1, 1, 1, 1 )
 metallic = 0.0
 metallic_specular = 0.0
 metallic_texture_channel = 0
@@ -34,7 +34,9 @@ roughness_texture_channel = 0
 emission_enabled = false
 normal_enabled = false
 rim_enabled = false
-clearcoat_enabled = false
+clearcoat_enabled = true
+clearcoat = 1.0
+clearcoat_gloss = 1.0
 anisotropy_enabled = false
 ao_enabled = false
 depth_enabled = false
@@ -52,7 +54,7 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
+_sections_unfolded = [ "Albedo", "Clearcoat", "Metallic", "Parameters", "Roughness" ]
 
 [sub_resource type="CubeMesh" id=2]
 
@@ -62,10 +64,13 @@ subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
+<<<<<<< Updated upstream
 [sub_resource type="ConvexPolygonShape" id=5]
 
 points = PoolVector3Array( -1, 0.0249939, 1.5, 1, 0.0249939, -1.5, 1, 0.0249939, 1.5, -1, 0.0249939, -1.5, -1, -0.0249939, 1.5, 1, -0.0249939, -1.5, 1, -0.0249939, 1.5, -1, -0.0249939, -1.5, 1, 0.0249939, 1.5, -1, 0.0249939, -1.5, 1, 0.0249939, -1.5, -1, 0.0249939, 1.5, 1, -0.0249939, 1.5, -1, -0.0249939, -1.5, 1, -0.0249939, -1.5, -1, -0.0249939, 1.5, 1, 0.0249939, 1.5, -1, -0.0249939, 1.5, -1, 0.0249939, 1.5, 1, -0.0249939, 1.5, 1, 0.0249939, -1.5, -1, -0.0249939, -1.5, -1, 0.0249939, -1.5, 1, -0.0249939, -1.5 )
 
+=======
+>>>>>>> Stashed changes
 [sub_resource type="Animation" id=3]
 
 resource_name = "flip"
@@ -152,6 +157,13 @@ tracks/3/keys = {
 "values": [ Vector3( 1, 1, 1 ), Vector3( 1, 1, 1 ), Vector3( 1, 1, 1 ), Vector3( 1, 1, 1 ), Vector3( 1, 1, 1 ) ]
 }
 
+<<<<<<< Updated upstream
+=======
+[sub_resource type="ConvexPolygonShape" id=5]
+
+points = PoolVector3Array( -1, 0.0249939, 1.5, 1, 0.0249939, -1.5, 1, 0.0249939, 1.5, -1, 0.0249939, -1.5, -1, -0.0249939, 1.5, 1, -0.0249939, -1.5, 1, -0.0249939, 1.5, -1, -0.0249939, -1.5, 1, 0.0249939, 1.5, -1, 0.0249939, -1.5, 1, 0.0249939, -1.5, -1, 0.0249939, 1.5, 1, -0.0249939, 1.5, -1, -0.0249939, -1.5, 1, -0.0249939, -1.5, -1, -0.0249939, 1.5, 1, 0.0249939, 1.5, -1, -0.0249939, 1.5, -1, 0.0249939, 1.5, 1, -0.0249939, 1.5, 1, 0.0249939, -1.5, -1, -0.0249939, -1.5, -1, 0.0249939, -1.5, 1, -0.0249939, -1.5 )
+
+>>>>>>> Stashed changes
 [node name="card" type="Spatial"]
 
 script = ExtResource( 1 )
@@ -174,7 +186,22 @@ skeleton = NodePath("..")
 material/0 = null
 _sections_unfolded = [ "Visibility" ]
 
+<<<<<<< Updated upstream
 [node name="Area" type="Area" parent="MeshInstance" index="0"]
+=======
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/flip = SubResource( 3 )
+"anims/flip back" = SubResource( 4 )
+blend_times = [  ]
+
+[node name="Area" type="Area" parent="." index="2"]
+>>>>>>> Stashed changes
 
 transform = Transform( -1, 3.25841e-07, 0, -3.25841e-07, -1, 0, 0, 0, 1, 0, 0, 0 )
 input_ray_pickable = false
