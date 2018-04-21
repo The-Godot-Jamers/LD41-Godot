@@ -8,6 +8,7 @@ func _ready():
 
 func _on_start():
 	get_parent().get_parent().hide()
+	get_node("../../../../../3d").spawn_deck(25)
 	#get_node("../../../../../2d/Node2D").show()
 
 func _on_options():

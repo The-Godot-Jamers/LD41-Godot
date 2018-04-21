@@ -6,7 +6,7 @@ var cards_ins=[]
 
 func _ready():
 	card_scene=load("res://objects/card.tscn")
-	spawn_deck(card_num)
+	#spawn_deck(card_num)
 
 
 func spawn_deck(cards):
