@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://objects/menu.gd" type="Script" id=1]
-[ext_resource path="res://sprites/UI/grey_button1.png" type="Texture" id=2]
-[ext_resource path="res://sprites/UI/grey_button2.png" type="Texture" id=3]
+[ext_resource path="res://sprites/UI/brown_button1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/UI/brown_button2.png" type="Texture" id=3]
 
-[node name="menu" type="CanvasLayer"]
+[node name="menu" type="CanvasLayer" index="0"]
 
 pause_mode = 2
 layer = 1
@@ -65,8 +65,18 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 script = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="StartButton" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="0"]
+[node name="Tween" type="Tween" parent="ui/CenterContainer/VBoxContainer" index="0"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="StartButton" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -131,7 +141,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
 
-[node name="OptionsButton" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="1"]
+[node name="OptionsButton" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -197,7 +207,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
 
-[node name="QuitButton" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="2"]
+[node name="QuitButton" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -263,5 +273,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
+
+[connection signal="tween_completed" from="ui/CenterContainer/VBoxContainer/Tween" to="ui/CenterContainer/VBoxContainer" method="_on_Tween_tween_completed"]
 
 

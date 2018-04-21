@@ -68,7 +68,7 @@ data = PoolVector3Array( -1.127, -2.3203, -1.5117, -1.1729, 1.0264, -1.5166, -1.
 
 radius = 5.61969
 
-[node name="3d" type="Node"]
+[node name="3d" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -175,7 +175,7 @@ shadow_bias = 0.15
 shadow_contact = 0.0
 shadow_reverse_cull_face = false
 editor_only = false
-omni_range = 20.0
+omni_range = 42.7
 omni_attenuation = 1.0
 omni_shadow_mode = 1
 omni_shadow_detail = 1

@@ -14,6 +14,7 @@ func spawn_deck(cards):
 	for x in range(cards):
 		var card_instance=card_scene.instance()
 		$CardLaybed/CardHolder.add_child(card_instance)
+		card_instance.flipping = true
 		cards_ins.append(card_instance)
 		card_instance.global_transform=spawnpos
 		card_instance.translation.y+=x*0.1
@@ -39,6 +40,7 @@ func flipcards(wait_flip=false):
 	else:
 		for x in cards_ins:
 			x.flip()
+	
 
 
 func wait():
