@@ -24,11 +24,7 @@ func _input(event):
 		
 	if event is InputEventMouse:
 		crosshair.global_position = event.global_position
-	if event is InputEventMouseButton:
-		if event.button_index == BUTTON_LEFT:
-			var hit = current_target.in_hit_box(crosshair.position)
-			current_target.shoot(hit)
-			prints("shoot", current_target.id, hit)
+
 			
 
 func random_pos_in_spawn_area():
