@@ -19,15 +19,15 @@ func random_pos_in_spawn_area(start = 0):
 
 func spawn_targets(number):
 	for i in range(0, number):
-		prints("make target number", i)
+		#prints("make target number", i)
 		var pos_id = random_pos_in_spawn_area()
-		prints("target", i, "on pos", spawn_area.polygon[pos_id])
+		#prints("target", i, "on pos", spawn_area.polygon[pos_id])
 
 		var target = target_tscn.instance()
 		target.id = i
 		target.position = spawn_area.global_position
 		target.position += spawn_area.polygon[pos_id]
-		print(spawn_area.position)
+		#print(spawn_area.position)
 		add_child(target)
 
 		
