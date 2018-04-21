@@ -11,3 +11,8 @@ func _process(delta):
 		get_parent().rotate_y(-Rotation_Speed*delta)
 	if Input.is_action_pressed("cam_rotate_right"):
 		get_parent().rotate_y(Rotation_Speed*delta)
+		
+	if Input.is_action_pressed("cam_zoom_in"):
+		translation=translation*0.95
+	if Input.is_action_pressed("cam_zoom_out"):
+		translation=translation*1.05
