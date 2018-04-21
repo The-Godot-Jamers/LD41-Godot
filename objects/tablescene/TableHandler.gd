@@ -3,7 +3,7 @@ extends Node
 var card_num=25
 var card_scene
 var cards_ins=[]
-
+var delay=10 #delay before fliping cards
 func _ready():
 	card_scene=load("res://objects/card.tscn")
 	#spawn_deck(card_num)
@@ -17,18 +17,39 @@ func spawn_deck(cards):
 		cards_ins.append(card_instance)
 		card_instance.global_transform=spawnpos
 		card_instance.translation.y+=x*0.1
-		card_instance.flip()
+		#card_instance.flip()
 	position_cards(cards)
 	
 
 func position_cards(cards):
 	var p=get_points_within_circle_rect(cards,$CardLaybed/Area/CollisionShape.shape.radius)
-	for x in cards:
+	var i=0
+	for x in range(cards-1,-1,-1):
+		i+=1
 		var c=cards_ins[x]
-		c.tweennode.interpolate_property( c, 'translation', c.translation, Vector3(p[x].x,0,p[x].y),1,Tween.TRANS_LINEAR,Tween.EASE_IN,1 )
+		c.tweennode.interpolate_property( c, 'translation', c.translation, Vector3(p[x].x,0,p[x].y),0.5,Tween.TRANS_LINEAR,Tween.EASE_IN,i*0.3 )
 		c.tweennode.start()
 		#c.translation=Vector3(p[x].x,0,p[x].y)
+		
 	
+	flipcards(true)
+func flipcards(wait_flip=false):
+	if wait_flip:
+		wait()
+	else:
+		for x in cards_ins:
+			x.flip()
+
+
+func wait():
+	var t = Timer.new()
+	t.set_wait_time(delay)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	flipcards()
+	return
 
 func get_points_within_circle_rect( npoints, radius ):
     if npoints == 1:
