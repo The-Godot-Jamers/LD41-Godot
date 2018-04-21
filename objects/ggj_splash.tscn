@@ -22,7 +22,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Transform( 0.971195, -0.018727, -0.237547, 0.0888229, 0.953509, 0.287977, 0.22111, -0.300782, 0.927707, 4.08271, 1.74521, 1.81377 ), Transform( 0.80859, 0.138483, -0.571843, 0.159165, 0.884187, 0.439182, 0.566435, -0.446136, 0.692903, 1.91957, 2.86473, 1.25465 ) ]
+"values": [ Transform( 0.971195, -0.018727, -0.237547, 0.0888229, 0.953509, 0.287977, 0.22111, -0.300782, 0.927707, 4.08271, 1.74521, 1.81377 ), Transform( 0.80859, 0.138482, -0.571843, 0.159165, 0.884187, 0.439182, 0.566435, -0.446136, 0.692903, 1.6857, 2.86473, 1.66906 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Camera2:translation")
@@ -34,7 +34,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector3( 4.08271, 1.74521, 1.81377 ), Vector3( 1.91957, 2.86473, 1.25465 ) ]
+"values": [ Vector3( 4.08271, 1.74521, 1.81377 ), Vector3( 1.6857, 2.86473, 1.66906 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Camera2:rotation_degrees")

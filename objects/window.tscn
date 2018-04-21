@@ -12,7 +12,7 @@ subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-[node name="window" type="Spatial" index="0"]
+[node name="window" type="Spatial"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.1119, 17.9865 )
 script = ExtResource( 1 )
