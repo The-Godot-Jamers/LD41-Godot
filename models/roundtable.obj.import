@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roundtable.obj-94516a54c801a4653f612b9a9dc84b47.mesh"
+
+[deps]
+
+files=[ "res://.import/roundtable.obj-94516a54c801a4653f612b9a9dc84b47.mesh" ]
+
+source_file="res://models/roundtable.obj"
+source_md5="2082d41a70defacd6878a6dc32844d25"
+
+dest_files=[ "res://.import/roundtable.obj-94516a54c801a4653f612b9a9dc84b47.mesh", "res://.import/roundtable.obj-94516a54c801a4653f612b9a9dc84b47.mesh" ]
+dest_md5="72a431f1cb38910bea9710b0ec84570c"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
