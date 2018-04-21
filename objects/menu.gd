@@ -8,8 +8,8 @@ func _ready():
 
 func _on_start():
 	get_parent().get_parent().hide()
-	get_node("2d").spawn_targets(30)
-	get_node("2d/Node2d").show()
+	get_node("../../../../../2d").spawn_targets(30)
+	get_node("../../../../../2d/Node2D").show()
 
 func _on_options():
 	pass
