@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://objects/menu.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://sprites/UI/grey_button1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/UI/grey_button2.png" type="Texture" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
 
 [node name="menu" type="CanvasLayer" index="0"]
 
@@ -52,10 +54,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 452.0
-margin_top = 180.0
-margin_right = 516.0
-margin_bottom = 380.0
+margin_left = 389.0
+margin_top = 202.0
+margin_right = 579.0
+margin_bottom = 357.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -67,13 +69,12 @@ script = ExtResource( 1 )
 
 [node name="StartButton" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 64.0
-margin_bottom = 64.0
+margin_right = 190.0
+margin_bottom = 49.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -84,13 +85,12 @@ use_top_left = false
 
 [node name="start" type="TextureButton" parent="ui/CenterContainer/VBoxContainer/StartButton" index="0"]
 
-modulate = Color( 0.0880127, 0.402344, 0, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 64.0
-margin_bottom = 64.0
+margin_right = 190.0
+margin_bottom = 49.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -103,7 +103,7 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 2 )
 texture_disabled = ExtResource( 2 )
 texture_focused = ExtResource( 2 )
@@ -115,10 +115,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 17.0
-margin_top = 25.0
-margin_right = 46.0
-margin_bottom = 39.0
+margin_left = 80.0
+margin_top = 17.0
+margin_right = 109.0
+margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -134,14 +134,13 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="OptionsButton" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 68.0
-margin_right = 64.0
-margin_bottom = 132.0
+margin_top = 53.0
+margin_right = 190.0
+margin_bottom = 102.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -152,13 +151,12 @@ use_top_left = false
 
 [node name="options" type="TextureButton" parent="ui/CenterContainer/VBoxContainer/OptionsButton" index="0"]
 
-modulate = Color( 0, 0.345428, 0.574219, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 64.0
-margin_bottom = 64.0
+margin_right = 190.0
+margin_bottom = 49.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -171,7 +169,7 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 2 )
 texture_disabled = ExtResource( 2 )
 texture_focused = ExtResource( 2 )
@@ -183,10 +181,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 6.0
-margin_top = 25.0
-margin_right = 57.0
-margin_bottom = 39.0
+margin_left = 69.0
+margin_top = 17.0
+margin_right = 120.0
+margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -202,14 +200,13 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="QuitButton" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 136.0
-margin_right = 64.0
-margin_bottom = 200.0
+margin_top = 106.0
+margin_right = 190.0
+margin_bottom = 155.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -220,13 +217,12 @@ use_top_left = false
 
 [node name="quit" type="TextureButton" parent="ui/CenterContainer/VBoxContainer/QuitButton" index="0"]
 
-modulate = Color( 1, 0.0703125, 0.0703125, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 64.0
-margin_bottom = 64.0
+margin_right = 190.0
+margin_bottom = 49.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -239,8 +235,10 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 2 )
+texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 2 )
+texture_disabled = ExtResource( 2 )
+texture_focused = ExtResource( 2 )
 stretch_mode = 4
 _sections_unfolded = [ "Mouse", "Rect", "Textures", "Visibility" ]
 
@@ -250,10 +248,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 18.0
-margin_top = 25.0
-margin_right = 46.0
-margin_bottom = 39.0
+margin_left = 81.0
+margin_top = 17.0
+margin_right = 109.0
+margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2

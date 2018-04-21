@@ -1,13 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://models/godot-game-jammers.dae" type="PackedScene" id=1]
 [ext_resource path="res://objects/ggj_splash.gd" type="Script" id=2]
+[ext_resource path="res://models/Godotface.material" type="Material" id=3]
+[ext_resource path="res://models/jammers.obj" type="ArrayMesh" id=4]
 
 [sub_resource type="Animation" id=1]
 
 resource_name = "splash"
 length = 4.0
-loop = true
+loop = false
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Camera2:transform")
@@ -125,22 +127,24 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Background" ]
 
-[node name="ggj_splash" instance=ExtResource( 1 )]
+[node name="ggj_splash" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
-[node name="Godot" parent="." index="1"]
+[node name="Godot" parent="." index="0"]
 
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 4.53514, 0.0199442, -2.48704 )
-_sections_unfolded = [ "Transform" ]
+material/0 = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "material" ]
 
-[node name="Lamp" parent="." index="2"]
+[node name="AnimationPlayer" parent="." index="1"]
 
-visible = false
+autoplay = "splash"
+anims/splash = SubResource( 1 )
 
-[node name="Camera2" type="Camera" parent="." index="3"]
+[node name="Camera2" type="Camera" parent="." index="2"]
 
-transform = Transform( 0.971195, -0.0187271, -0.237547, 0.0888229, 0.953509, 0.287977, 0.22111, -0.300782, 0.927707, 4.08271, 1.74521, 1.81377 )
+transform = Transform( 0.971195, -0.0187268, -0.237548, 0.0888229, 0.953509, 0.287977, 0.221111, -0.300782, 0.927707, 4.08271, 1.74521, 1.81377 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -155,12 +159,7 @@ near = 0.05
 far = 100.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="AnimationPlayer" parent="." index="4"]
-
-autoplay = "splash"
-anims/splash = SubResource( 1 )
-
-[node name="DirectionalLight" type="DirectionalLight" parent="." index="5"]
+[node name="DirectionalLight" type="DirectionalLight" parent="." index="3"]
 
 transform = Transform( 0.391437, 0.920205, 0, -0.290904, 0.123745, 0.948716, 0.873013, -0.371362, 0.31613, -0.0350657, 1.82366, -4.76837e-07 )
 layers = 1
@@ -188,8 +187,25 @@ directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 _sections_unfolded = [ "Light", "Shadow" ]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="6"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="4"]
 
 environment = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="." index="5"]
+
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.33352, 0.190119, -0.153098 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+_sections_unfolded = [ "Transform" ]
 
 

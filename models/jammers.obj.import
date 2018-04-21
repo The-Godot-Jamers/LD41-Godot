@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/jammers.obj-8a66ccad62ed0bafdb33781d7a47034a.mesh"
+
+[deps]
+
+files=[ "res://.import/jammers.obj-8a66ccad62ed0bafdb33781d7a47034a.mesh" ]
+
+source_file="res://models/jammers.obj"
+source_md5="32d7f58b7790ecd89dba10f9566d5ff8"
+
+dest_files=[ "res://.import/jammers.obj-8a66ccad62ed0bafdb33781d7a47034a.mesh", "res://.import/jammers.obj-8a66ccad62ed0bafdb33781d7a47034a.mesh" ]
+dest_md5="7d569ba2fc20a26981916713ea211a8e"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
