@@ -19,3 +19,5 @@ func _process(delta):
 		translation=translation*1.05
 	if Input.is_action_just_pressed("2"):
 		$AnimationPlayer.play("camera turn")
+	if Input.is_action_just_pressed("3"):
+		$AnimationPlayer.play("camera turn back")
