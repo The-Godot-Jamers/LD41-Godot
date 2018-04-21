@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/long_draw2.wav-bd7347a11ecc7600108e700fb646d9dc.sample"
+
+[deps]
+
+source_file="res://sounds/long_draw2.wav"
+source_md5="272325ffd649857501e0b75cdfdb597d"
+
+dest_files=[ "res://.import/long_draw2.wav-bd7347a11ecc7600108e700fb646d9dc.sample" ]
+dest_md5="1c5f8104989f0eda521712af6423582f"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

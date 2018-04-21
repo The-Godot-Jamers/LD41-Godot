@@ -12,7 +12,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="2d" type="Node" index="0"]
+[node name="2d" type="Node"]
 
 [node name="Node2D" type="Node2D" parent="." index="0"]
 

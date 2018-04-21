@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/lay_card_high.wav-01e6ad07f2efed181a14bbf7968096f6.sample"
+
+[deps]
+
+source_file="res://sounds/lay_card_high.wav"
+source_md5="33f99cf6fab6ffc6bdc9f6a305925ee1"
+
+dest_files=[ "res://.import/lay_card_high.wav-01e6ad07f2efed181a14bbf7968096f6.sample" ]
+dest_md5="7d4cca464243044631cf13edfa08c291"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
