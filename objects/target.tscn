@@ -1,6 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://objects/target.gd" type="Script" id=1]
+<<<<<<< Updated upstream
+=======
+[ext_resource path="res://sprites/target.png" type="Texture" id=2]
+>>>>>>> Stashed changes
 
 [sub_resource type="Animation" id=1]
 
@@ -67,7 +71,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id=3]
 
 resource_name = "walk"
-length = 2.0
+length = 5.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
@@ -77,7 +81,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2 ),
+"times": PoolRealArray( 0, 2.5, 5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.323532, -16.8237 ), Vector2( -158.676, -16.8237 ), Vector2( 0.323532, -16.8237 ) ]
@@ -89,22 +93,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1, 2 ),
+"times": PoolRealArray( 0, 2.5, 5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("AnimatedSprite:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ Vector2( 3.10769, 3.10769 ), Vector2( -3.10769, 3.10769 ), Vector2( 3.10769, 3.10769 ) ]
 }
 
 [sub_resource type="SpriteFrames" id=4]
@@ -120,7 +112,7 @@ animations = [ {
 
 position = Vector2( 37.7115, 2.34138 )
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
 
@@ -138,29 +130,30 @@ blend_times = [  ]
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
 
 position = Vector2( 0.323532, -16.8237 )
-scale = Vector2( 3.10769, 3.10769 )
+scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 4 )
 animation = "default"
 offset = Vector2( -17.1487, 1.61696 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="HitBox" type="Polygon2D" parent="." index="2"]
+[node name="Area2D" type="Area2D" parent="AnimatedSprite" index="0"]
 
-position = Vector2( -7.7115, -2.34138 )
-polygon = PoolVector2Array( -17.7115, -42.3414, 32.2885, -42.3414, 32.2885, 27.6586, -17.7115, 27.6586 )
-uv = PoolVector2Array(  )
-color = Color( 0.855469, 0.0768585, 0.0768585, 0.33149 )
-vertex_colors = PoolColorArray(  )
-offset = Vector2( 0, 0 )
-antialiased = false
-texture = null
-texture_offset = Vector2( 0, 0 )
-texture_scale = Vector2( 1, 1 )
-texture_rotation_degrees = 0.0
-invert_enable = false
-invert_border = 100.0
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="Timer" type="Timer" parent="." index="3"]
+[node name="HitBox" type="CollisionPolygon2D" parent="AnimatedSprite/Area2D" index="0"]
+
+position = Vector2( -40.1752, 72.4116 )
+scale = Vector2( 5, 5 )
+build_mode = 0
+polygon = PoolVector2Array( 1.90735e-06, -60, -5.54893, -52.0575, -5.19044, -43.4538, -0.888624, -35.2087, -8.41681, -31.6238, -12.7186, -21.9447, -14.8696, -0.435608, -6.62439, -0.435608, -3.39802, 31.8281, 3.05471, 32.1866, 14.1678, 31.8281, 15.9602, 0.281357, 24.9223, -0.0771255, 23.4884, -21.2278, 17.7526, -32.3408, 9.86595, -34.4917, 14.5263, -44.5293, 13.8093, -53.133, 8.79048, -59.5857 )
+
+[node name="Timer" type="Timer" parent="." index="2"]
 
 process_mode = 1
 wait_time = 1.0
