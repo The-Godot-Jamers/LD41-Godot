@@ -26,11 +26,5 @@ editor/display_folded = true
 
 [node name="debug" parent="ui" index="1" instance=ExtResource( 5 )]
 
-[connection signal="pressed" from="ui/menu/ui/CenterContainer/VBoxContainer/CenterContainer3/start" to="ui" method="_on_start_pressed"]
-
-[connection signal="pressed" from="ui/menu/ui/CenterContainer/VBoxContainer/CenterContainer2/options" to="ui" method="_on_options_pressed"]
-
-[connection signal="pressed" from="ui/menu/ui/CenterContainer/VBoxContainer/CenterContainer/quit" to="ui" method="_on_quit_pressed"]
-
 
 [editable path="ui/menu"]
