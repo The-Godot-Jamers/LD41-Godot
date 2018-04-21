@@ -51,6 +51,8 @@ targets = 30
 
 [node name="Node2D" type="Node2D" parent="." index="0"]
 
+visible = false
+
 [node name="Ground" type="Sprite" parent="Node2D" index="0"]
 
 position = Vector2( 516.247, 546.067 )

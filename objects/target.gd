@@ -4,7 +4,7 @@ var id = 0
 
 func _ready():
 	# connet to right signal
-	# $AnimationPlayer.play("moving")
+	$AnimationPlayer.play("walk")
 	pass
 
 func _on_card_shoot(index, hit):
