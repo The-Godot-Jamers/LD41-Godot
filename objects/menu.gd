@@ -7,7 +7,7 @@ func _ready():
 
 
 func _on_start():
-	hide()
+	get_parent().get_parent().hide()
 	# add stuff to active 2d scene
 
 func _on_options():
