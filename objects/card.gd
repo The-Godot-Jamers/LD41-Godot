@@ -10,7 +10,12 @@ func _ready():
 	pass
 
 func flip():
-	$MeshInstance/AnimationPlayer.play("flip")
+	$AnimationPlayer.play("flip")
 func flip_back():
-	$MeshInstance/AnimationPlayer.play("flip back")
+	$AnimationPlayer.play("flip back")
 	
+
+func mouse_over():
+	$MeshInstance.get_material().set_shader_param("mouse_over", true)
+func mouse_out():
+	$MeshInstance.get_material().set_shader_param("mouse_over", false)
