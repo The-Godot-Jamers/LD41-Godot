@@ -16,8 +16,8 @@ flags_fixed_size = false
 flags_albedo_tex_force_srgb = false
 vertex_color_use_as_albedo = false
 vertex_color_is_srgb = false
-params_diffuse_mode = 4
-params_specular_mode = 3
+params_diffuse_mode = 0
+params_specular_mode = 0
 params_blend_mode = 0
 params_cull_mode = 0
 params_depth_draw_mode = 0
@@ -55,7 +55,7 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Albedo", "Clearcoat", "Metallic", "Parameters", "Roughness" ]
+_sections_unfolded = [ "Albedo", "Clearcoat", "Metallic", "Roughness" ]
 
 [sub_resource type="CubeMesh" id=2]
 

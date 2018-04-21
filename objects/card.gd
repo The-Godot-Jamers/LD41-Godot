@@ -5,7 +5,7 @@ var is_flipped = false
 func _ready():
 	randomize()
 	tweennode = $Tween
-	$Area/MeshInstance/Sprite3D.modulate = Color(rand_range(-100,100),rand_range(-100,100),rand_range(-100,100))
+	$Area/MeshInstance/Sprite3D.modulate = Color(rand_range(0,0.5),rand_range(0,0.5),rand_range(0,0.5))
 
 func flip():
 	$Area/MeshInstance/AnimationPlayer.play("flip")
