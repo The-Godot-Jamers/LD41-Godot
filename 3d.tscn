@@ -48,6 +48,7 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 
 shape = SubResource( 3 )
 disabled = false
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="CameraPivot" type="Position3D" parent="." index="1"]
 
@@ -79,7 +80,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.18356, 0 )
 
 [node name="Area" type="Area" parent="CardLaybed" index="0"]
 
-editor/display_folded = true
 input_ray_pickable = false
 input_capture_on_drag = false
 space_override = 0
@@ -107,5 +107,7 @@ shape = SubResource( 2 )
 disabled = false
 
 [node name="DeckPosition" type="Position3D" parent="CardLaybed" index="1"]
+
+[node name="CardHolder" type="Spatial" parent="CardLaybed" index="2"]
 
 
