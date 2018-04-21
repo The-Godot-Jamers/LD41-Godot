@@ -12,7 +12,7 @@ data = PoolVector3Array( -1.127, -2.3203, -1.5117, -1.1729, 1.0264, -1.5166, -1.
 
 radius = 6.89043
 
-[node name="3d" type="Node"]
+[node name="3d" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
