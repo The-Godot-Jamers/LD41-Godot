@@ -157,7 +157,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
-transform = Transform( -0.439086, 1.43072e-07, 0, -1.43072e-07, -0.439086, 0, 0, 0, 0.439086, 0, 0, 0 )
+transform = Transform( 0.439086, 0, 0, 0, 0.439086, 0, 0, 0, 0.439086, 0, 0, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -243,5 +243,14 @@ playback_speed = 1.0
 anims/flip = SubResource( 6 )
 "anims/flip back" = SubResource( 7 )
 blend_times = [  ]
+
+[node name="Tween" type="Tween" parent="." index="1"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
 
 

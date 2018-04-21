@@ -10,7 +10,7 @@ data = PoolVector3Array( -1.127, -2.3203, -1.5117, -1.1729, 1.0264, -1.5166, -1.
 
 [sub_resource type="SphereShape" id=2]
 
-radius = 6.89043
+radius = 5.61969
 
 [node name="3d" type="Node" index="0"]
 
@@ -74,7 +74,6 @@ Rotation_Speed = 5
 
 [node name="CardLaybed" type="Spatial" parent="." index="2"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.18356, 0 )
 
 [node name="Area" type="Area" parent="CardLaybed" index="0"]
@@ -104,6 +103,7 @@ reverb_bus_uniformity = 0.0
 
 shape = SubResource( 2 )
 disabled = false
+_sections_unfolded = [ "Transform" ]
 
 [node name="DeckPosition" type="Position3D" parent="CardLaybed" index="1"]
 
