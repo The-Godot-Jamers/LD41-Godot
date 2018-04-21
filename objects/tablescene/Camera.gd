@@ -1,6 +1,7 @@
 extends Camera
 
 export var Rotation_Speed=5
+var looking_at_table = true
 
 func _ready():
 
@@ -16,3 +17,5 @@ func _process(delta):
 		translation=translation*0.95
 	if Input.is_action_pressed("cam_zoom_out"):
 		translation=translation*1.05
+	if Input.is_action_just_pressed("2"):
+		$AnimationPlayer.play("camera turn")

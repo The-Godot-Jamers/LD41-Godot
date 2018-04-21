@@ -8,6 +8,7 @@ onready var spawn_area = $Node2D/Ground/SpawnArea
 func _ready():
 	# connet to right signal
 	spawn_area.hide()
+	spawn_targets(30)
 
 func _on_card_shoot(index, hit):
 	$AnimationPlayer.play("shoot")

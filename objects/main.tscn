@@ -1,22 +1,19 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://objects/main.gd" type="Script" id=1]
-[ext_resource path="res://2d.tscn" type="PackedScene" id=2]
-[ext_resource path="res://3d.tscn" type="PackedScene" id=3]
-[ext_resource path="res://objects/menu.tscn" type="PackedScene" id=4]
-[ext_resource path="res://objects/debug.tscn" type="PackedScene" id=5]
+[ext_resource path="res://3d.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/menu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/debug.tscn" type="PackedScene" id=4]
 
 [node name="main" type="Node"]
 
 script = ExtResource( 1 )
 
-[node name="2d" parent="." index="0" instance=ExtResource( 2 )]
+[node name="3d" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="3d" parent="." index="1" instance=ExtResource( 3 )]
+[node name="ui" type="Node" parent="." index="1"]
 
-[node name="ui" type="Node" parent="." index="2"]
-
-[node name="menu" parent="ui" index="0" instance=ExtResource( 4 )]
+[node name="menu" parent="ui" index="0" instance=ExtResource( 3 )]
 
 editor/display_folded = true
 
@@ -24,7 +21,7 @@ editor/display_folded = true
 
 editor/display_folded = true
 
-[node name="debug" parent="ui" index="1" instance=ExtResource( 5 )]
+[node name="debug" parent="ui" index="1" instance=ExtResource( 4 )]
 
 
 [editable path="ui/menu"]
