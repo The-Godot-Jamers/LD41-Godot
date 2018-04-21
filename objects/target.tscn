@@ -34,7 +34,7 @@ tracks/1/keys = {
 "values": [ 0.0, 90.0 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=2]
 
 resource_name = "miss"
 length = 1.0
@@ -65,7 +65,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=3]
 
 resource_name = "walk"
 length = 2.0
@@ -78,7 +78,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 2 ),
+"times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.323532, -16.8237 ), Vector2( -158.676, -16.8237 ), Vector2( 0.323532, -16.8237 ) ]
@@ -90,7 +90,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 2 ),
+"times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.0 ]
@@ -102,7 +102,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5, 2 ),
+"times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ Vector2( 3.10769, 3.10769 ), Vector2( -3.10769, 3.10769 ), Vector2( 3.10769, 3.10769 ) ]
@@ -131,8 +131,8 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/death = SubResource( 1 )
-anims/miss = SubResource( 5 )
-anims/walk = SubResource( 6 )
+anims/miss = SubResource( 2 )
+anims/walk = SubResource( 3 )
 next/miss = "moving"
 blend_times = [  ]
 
@@ -145,14 +145,27 @@ animation = "default"
 offset = Vector2( -17.1487, 1.61696 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="AnimatedSprite2" type="AnimatedSprite" parent="AnimatedSprite" index="0"]
+[node name="HitBox" type="Polygon2D" parent="." index="2"]
 
-modulate = Color( 0.0078125, 0.00177002, 0.00177002, 0.469608 )
-show_behind_parent = true
-position = Vector2( 0.632292, 1.44233 )
-frames = SubResource( 4 )
-animation = "default"
-offset = Vector2( -17.1487, 1.61696 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+position = Vector2( -7.7115, -2.34138 )
+polygon = PoolVector2Array( -17.7115, -42.3414, 32.2885, -42.3414, 32.2885, 27.6586, -17.7115, 27.6586 )
+uv = PoolVector2Array(  )
+color = Color( 0.855469, 0.0768585, 0.0768585, 0.33149 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="Timer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
 
 
