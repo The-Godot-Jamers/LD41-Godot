@@ -10,9 +10,9 @@ func _ready():
 	pass
 
 func flip():
-	$AnimationPlayer.play("flip")
+	$MeshInstance/AnimationPlayer.play("flip")
 func flip_back():
-	$AnimationPlayer.play("flip back")
+	$MeshInstance/AnimationPlayer.play("flip back")
 	
 
 func mouse_over():

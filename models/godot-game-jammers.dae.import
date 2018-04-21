@@ -7,7 +7,7 @@ path="res://.import/godot-game-jammers.dae-a42ef5b979b6bf473a4eda4db949043e.scn"
 [deps]
 
 source_file="res://models/godot-game-jammers.dae"
-source_md5="f5ff17fed2783d8e4bfae7ae785dcc4c"
+source_md5="a5255a5b459bf80690e0fbe0cd89a6b6"
 
 dest_files=[ "res://.import/godot-game-jammers.dae-a42ef5b979b6bf473a4eda4db949043e.scn" ]
 dest_md5="d84eb37956b3feb1b774454d858e77f8"
