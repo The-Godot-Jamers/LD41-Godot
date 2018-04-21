@@ -117,20 +117,20 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Background" ]
 
-[sub_resource type="ShaderMaterial" id=4]
+[sub_resource type="ShaderMaterial" id=3]
 
 render_priority = 0
 shader = ExtResource( 6 )
 
-[sub_resource type="CubeMesh" id=5]
+[sub_resource type="CubeMesh" id=4]
 
-material = SubResource( 4 )
+material = SubResource( 3 )
 size = Vector3( 10, 0.1, 10 )
 subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-[node name="ggj_splash" index="0" instance=ExtResource( 1 )]
+[node name="ggj_splash" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
@@ -223,7 +223,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 5 )
+mesh = SubResource( 4 )
 skeleton = NodePath("..")
 material/0 = null
 _sections_unfolded = [ "Geometry", "Transform", "material" ]

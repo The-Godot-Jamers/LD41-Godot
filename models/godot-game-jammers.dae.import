@@ -7,11 +7,7 @@ path="res://.import/godot-game-jammers.dae-a42ef5b979b6bf473a4eda4db949043e.scn"
 [deps]
 
 source_file="res://models/godot-game-jammers.dae"
-<<<<<<< Updated upstream
-source_md5="a5255a5b459bf80690e0fbe0cd89a6b6"
-=======
 source_md5="378e4f6dca8d568b2abad310efd4aadd"
->>>>>>> Stashed changes
 
 dest_files=[ "res://.import/godot-game-jammers.dae-a42ef5b979b6bf473a4eda4db949043e.scn" ]
 dest_md5="146347cdc8b7048322018f5dd88e09fa"
