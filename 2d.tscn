@@ -45,7 +45,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="2d" type="Node" index="0"]
+[node name="2d" type="Node"]
 
 script = ExtResource( 1 )
 targets = 30
@@ -102,7 +102,6 @@ _sections_unfolded = [ "Transform" ]
 visible = false
 show_behind_parent = true
 position = Vector2( 503, 511 )
-scale = Vector2( 1, 1 )
 enabled = true
 editor_only = false
 texture = ExtResource( 4 )
