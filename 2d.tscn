@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://2d.gd" type="Script" id=1]
 [ext_resource path="res://sprites/ground.png" type="Texture" id=2]
 [ext_resource path="res://sprites/player_green.png" type="Texture" id=3]
+[ext_resource path="res://sprites/crosshair_mask.png" type="Texture" id=4]
 
 [sub_resource type="Animation" id=1]
 
@@ -95,5 +96,34 @@ frames = SubResource( 2 )
 animation = "default"
 offset = Vector2( 17.8759, -0.21608 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="Crosshair" type="Light2D" parent="Node2D/Player" index="2"]
+
+visible = false
+show_behind_parent = true
+position = Vector2( 503, 511 )
+scale = Vector2( 1, 1 )
+enabled = true
+editor_only = false
+texture = ExtResource( 4 )
+offset = Vector2( -13.0002, 18.9998 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 3
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Shadow", "Transform", "Visibility", "Z Index" ]
 
 
