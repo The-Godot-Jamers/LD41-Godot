@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=3 format=2]
-=======
-[gd_scene load_steps=8 format=2]
-
-[ext_resource path="res://objects/card.gd" type="Script" id=1]
->>>>>>> testbranch
+[gd_scene load_steps=6 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -29,11 +23,7 @@ params_point_size = 1.0
 params_billboard_mode = 0
 params_grow = false
 params_use_alpha_scissor = false
-<<<<<<< HEAD
 albedo_color = Color( 0.546875, 0.546875, 0.546875, 1 )
-=======
-albedo_color = Color( 0.664063, 0.111542, 0.111542, 1 )
->>>>>>> testbranch
 metallic = 0.0
 metallic_specular = 0.0
 metallic_texture_channel = 0
@@ -60,11 +50,7 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-<<<<<<< HEAD
 _sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
-=======
-_sections_unfolded = [ "Albedo" ]
->>>>>>> testbranch
 
 [sub_resource type="CubeMesh" id=2]
 
@@ -74,70 +60,6 @@ subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-<<<<<<< HEAD
-[node name="card" type="Spatial" index="0"]
-
-[node name="MeshInstance" type="MeshInstance" parent="." index="0"]
-=======
-[sub_resource type="ConvexPolygonShape" id=6]
-
-points = PoolVector3Array( -1, 0.0249939, 1.5, 1, 0.0249939, -1.5, 1, 0.0249939, 1.5, -1, 0.0249939, -1.5, -1, -0.0249939, 1.5, 1, -0.0249939, -1.5, 1, -0.0249939, 1.5, -1, -0.0249939, -1.5, 1, 0.0249939, 1.5, -1, 0.0249939, -1.5, 1, 0.0249939, -1.5, -1, 0.0249939, 1.5, 1, -0.0249939, 1.5, -1, -0.0249939, -1.5, 1, -0.0249939, -1.5, -1, -0.0249939, 1.5, 1, 0.0249939, 1.5, -1, -0.0249939, 1.5, -1, 0.0249939, 1.5, 1, -0.0249939, 1.5, 1, 0.0249939, -1.5, -1, -0.0249939, -1.5, -1, 0.0249939, -1.5, 1, -0.0249939, -1.5 )
-
-[sub_resource type="Animation" id=3]
-
-resource_name = "base"
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Spatial:transform")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Spatial:translation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Spatial:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Spatial:scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector3( 1, 1, 1 ) ]
-}
-
 [sub_resource type="Animation" id=4]
 
 resource_name = "flip"
@@ -145,7 +67,7 @@ length = 2.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Spatial:transform")
+tracks/0/path = NodePath(".:translation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -154,10 +76,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.685403, 0 ), Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0.685403, 0 ), Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0.685403, 0 ), Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0.8, 0 ), Vector3( 0, 0.8, 0 ), Vector3( 0, 0.8, 0 ), Vector3( 0, 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Spatial:translation")
+tracks/1/path = NodePath(".:transform")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -166,10 +88,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0.685403, 0 ), Vector3( 0, 0.685403, 0 ), Vector3( 0, 0.685403, 0 ), Vector3( 0, 0, 0 ) ]
+"values": [ Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0 ), Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0.8, 0 ), Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0.8, 0 ), Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Spatial:rotation_degrees")
+tracks/2/path = NodePath(".:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -181,7 +103,7 @@ tracks/2/keys = {
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 90 ), Vector3( 0, 0, 180 ), Vector3( 0, 0, 180 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Spatial:scale")
+tracks/3/path = NodePath(".:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -195,12 +117,12 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=5]
 
-resource_name = "flip_back"
+resource_name = "flip back"
 length = 2.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Spatial:transform")
+tracks/0/path = NodePath(".:transform")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -209,10 +131,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.685403, 0 ), Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0.685403, 0 ), Transform( -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 0.685403, 0 ), Transform( -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0 ) ]
+"values": [ Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0 ), Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0.8, 0 ), Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0.8, 0 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Spatial:translation")
+tracks/1/path = NodePath(".:translation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -221,10 +143,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0.685403, 0 ), Vector3( 0, 0.685403, 0 ), Vector3( 0, 0.685403, 0 ), Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0.8, 0 ), Vector3( 0, 0.8, 0 ), Vector3( 0, 0.8, 0 ), Vector3( 0, 0, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Spatial:rotation_degrees")
+tracks/2/path = NodePath(".:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -233,32 +155,30 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, -90 ), Vector3( 0, 0, -180 ), Vector3( 0, 0, -180 ) ]
+"values": [ Vector3( 0, 0, 180 ), Vector3( 0, 0, 180 ), Vector3( 0, 0, 90 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Spatial:scale")
+tracks/3/path = NodePath(".:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5, 1.5, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 1, 1, 1 ), Vector3( 1, 1, 1 ), Vector3( 1, 1, 1 ), Vector3( 1, 1, 1 ) ]
+"values": [ Vector3( 1, 1, 1 ), Vector3( 1, 1, 1 ), Vector3( 1, 1, 1 ), Vector3( 1, 1, 1 ), Vector3( 1, 1, 1 ) ]
 }
 
-[node name="card" type="Node" index="0"]
+[sub_resource type="ConvexPolygonShape" id=3]
 
-script = ExtResource( 1 )
+points = PoolVector3Array( -1, 0.0249939, 1.5, 1, 0.0249939, -1.5, 1, 0.0249939, 1.5, -1, 0.0249939, -1.5, -1, -0.0249939, 1.5, 1, -0.0249939, -1.5, 1, -0.0249939, 1.5, -1, -0.0249939, -1.5, 1, 0.0249939, 1.5, -1, 0.0249939, -1.5, 1, 0.0249939, -1.5, -1, 0.0249939, 1.5, 1, -0.0249939, 1.5, -1, -0.0249939, -1.5, 1, -0.0249939, -1.5, -1, -0.0249939, 1.5, 1, 0.0249939, 1.5, -1, -0.0249939, 1.5, -1, 0.0249939, 1.5, 1, -0.0249939, 1.5, 1, 0.0249939, -1.5, -1, -0.0249939, -1.5, -1, 0.0249939, -1.5, 1, -0.0249939, -1.5 )
 
-[node name="Spatial" type="Spatial" parent="." index="0"]
+[node name="card" type="Spatial" index="0"]
 
-transform = Transform( -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="card_mesh" type="MeshInstance" parent="Spatial" index="0"]
->>>>>>> testbranch
+[node name="MeshInstance" type="MeshInstance" parent="." index="0"]
 
 layers = 1
 material_override = null
@@ -273,9 +193,18 @@ mesh = SubResource( 2 )
 skeleton = NodePath("..")
 material/0 = null
 
-<<<<<<< HEAD
-=======
-[node name="click_area" type="Area" parent="Spatial" index="1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/flip = SubResource( 4 )
+"anims/flip back" = SubResource( 5 )
+blend_times = [  ]
+
+[node name="Area" type="Area" parent="." index="2"]
 
 input_ray_pickable = false
 input_capture_on_drag = false
@@ -298,22 +227,9 @@ reverb_bus_name = "Master"
 reverb_bus_amount = 0.0
 reverb_bus_uniformity = 0.0
 
-[node name="CollisionShape" type="CollisionShape" parent="Spatial/click_area" index="0"]
+[node name="CollisionShape" type="CollisionShape" parent="Area" index="0"]
 
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 disabled = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/base = SubResource( 3 )
-anims/flip = SubResource( 4 )
-anims/flip_back = SubResource( 5 )
-blend_times = [  ]
-
->>>>>>> testbranch
 

@@ -1,4 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://objects/card.tscn" type="PackedScene" id=1]
+
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -61,7 +64,7 @@ subdivide_depth = 0
 
 [node name="3d" type="Node" index="0"]
 
-[node name="MeshInstance" type="MeshInstance" parent="." index="0"]
+[node name="table" type="MeshInstance" parent="." index="0"]
 
 layers = 1
 material_override = null
@@ -75,5 +78,7 @@ lod_max_hysteresis = 0.0
 mesh = SubResource( 2 )
 skeleton = NodePath("..")
 material/0 = null
+
+[node name="card" parent="." index="1" instance=ExtResource( 1 )]
 
 

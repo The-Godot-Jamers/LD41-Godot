@@ -1,12 +1,24 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://objects/main.gd" type="Script" id=1]
+<<<<<<< HEAD
 [ext_resource path="res://2d.tscn" type="PackedScene" id=2]
 [ext_resource path="res://3d.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/menu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objects/debug.tscn" type="PackedScene" id=5]
 
 [node name="main" type="Node"]
+=======
+[ext_resource path="res://objects/2d.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/3d.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/UI.gd" type="Script" id=4]
+[ext_resource path="res://objects/menu.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/debug.tscn" type="PackedScene" id=6]
+
+
+
+[node name="main" type="Node" index="0"]
+>>>>>>> testbranch
 
 script = ExtResource( 1 )
 
