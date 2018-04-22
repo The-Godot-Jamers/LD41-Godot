@@ -7,7 +7,6 @@ var show_card
 var delay=10 #delay before fliping cards
 func _ready():
 	card_scene=load("res://objects/card.tscn")
-	#spawn_deck(card_num)
 
 
 func spawn_deck(cards):
