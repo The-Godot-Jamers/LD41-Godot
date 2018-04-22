@@ -3,7 +3,7 @@ extends Node2D
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-
+var thread
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
@@ -12,14 +12,14 @@ func _ready():
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
-#	pass
+#	pa
 func loadscn(path):
+	thread=Thread.new()
+	thread.start(self,'fadeloader',path)
+func fadeloader(path):
 	
 	var scn=load(path)
 	var t=get_viewport().get_texture().get_data()
-	yield(get_tree(),'idle_frame')
-	yield(get_tree(),'idle_frame')
-	print(t)
 	t.flip_y()
 	var im=ImageTexture.new()
 	im.create_from_image(t)
