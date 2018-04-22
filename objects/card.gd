@@ -39,11 +39,11 @@ func _on_Area_input_event(camera, event, click_position, click_normal, shape_idx
 			pass
 		else:
 			if is_flipped:
-				#$draw1.play()
+				$draw1.play()
 				emit_signal("hide")
 				flip() #sounds wrong way but its not
 			else:
-				#$draw2.play()
+				$draw2.play()
 				emit_signal("show")
 				flip_back() #sounds wrong way but its not
 			is_flipped = !is_flipped
