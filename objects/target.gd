@@ -38,3 +38,7 @@ func shoot(hit):
 		set_process_input(false)
 	else:
 		$AnimationPlayer.play("miss")
+		
+func changeid(nid):
+	id=nid
+	CharacterGenerator.makechar(CharacterGenerator.characters[nid],get_node("AnimatedSprite"))

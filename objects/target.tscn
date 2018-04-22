@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://objects/target.gd" type="Script" id=1]
-[ext_resource path="res://sprites/characters/male 1/skin.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=1]
 
@@ -99,13 +98,58 @@ tracks/1/keys = {
 [sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
-"frames": [ null, null ],
+"frames": [  ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[node name="target" type="Node2D" index="0"]
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=9]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="target" type="Node2D"]
 
 position = Vector2( 37.7115, 2.34138 )
 script = ExtResource( 1 )
@@ -124,24 +168,11 @@ anims/walk = SubResource( 3 )
 next/miss = "moving"
 blend_times = [  ]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+[node name="Area2D" type="Area2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( -2.14383, -16.8237 )
 scale = Vector2( 0.2, 0.2 )
-frames = SubResource( 4 )
-animation = "default"
-offset = Vector2( -17.1487, 1.61696 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-
-[node name="skin" type="Sprite" parent="AnimatedSprite" index="0"]
-
-show_behind_parent = true
-position = Vector2( -0.994019, -216.666 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="Area2D" type="Area2D" parent="AnimatedSprite" index="1"]
-
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -150,14 +181,52 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="HitBox" type="CollisionPolygon2D" parent="AnimatedSprite/Area2D" index="0"]
+[node name="HitBox" type="CollisionPolygon2D" parent="Area2D" index="0"]
 
 position = Vector2( -40.1752, 72.4116 )
 scale = Vector2( 5, 5 )
 build_mode = 0
 polygon = PoolVector2Array( 19.7615, -109.449, -0.578232, -107.318, -12.5884, -97.8265, -3.5883, -68.7247, -19.7605, -60.163, -18.8092, -31.8616, -9.29615, -21.3972, -6.91787, 27.1195, -19.0471, 41.627, 27.8049, 39.7244, 25.1888, -9.74364, 24.9509, -27.105, 31.1345, -30.1968, 33.7505, -63.2547, 23.2862, -64.4439, 13.7731, -74.4326, 25.1854, -86.785 )
 
-[node name="Timer" type="Timer" parent="." index="2"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
+
+position = Vector2( -2.14383, -16.8237 )
+scale = Vector2( 0.2, 0.2 )
+animation = "default"
+offset = Vector2( -17.1487, 1.61696 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="body" type="AnimatedSprite" parent="AnimatedSprite" index="0"]
+
+frames = SubResource( 4 )
+animation = "default"
+
+[node name="hair" type="AnimatedSprite" parent="AnimatedSprite" index="1"]
+
+frames = SubResource( 5 )
+animation = "default"
+
+[node name="shoes" type="AnimatedSprite" parent="AnimatedSprite" index="2"]
+
+frames = SubResource( 6 )
+animation = "default"
+
+[node name="shirt" type="AnimatedSprite" parent="AnimatedSprite" index="3"]
+
+frames = SubResource( 7 )
+animation = "default"
+
+[node name="pant" type="AnimatedSprite" parent="AnimatedSprite" index="4"]
+
+frames = SubResource( 8 )
+animation = "default"
+
+[node name="cap" type="AnimatedSprite" parent="AnimatedSprite" index="5"]
+
+frames = SubResource( 9 )
+animation = "default"
+
+[node name="Timer" type="Timer" parent="." index="3"]
 
 process_mode = 1
 wait_time = 1.0

@@ -79,7 +79,7 @@ func spawn_targets(number):
 		#prints("target", i, "on pos", spawn_area.polygon[pos_id])
 
 		var target = target_tscn.instance()
-		target.id = i
+		target.changeid(i)
 		target.global_position=pos
 		#print(spawn_area.position)
 		$CharacterHolder.add_child(target)

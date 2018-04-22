@@ -52,7 +52,7 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="2d" type="Node2D"]
+[node name="2d" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 targets = 16
@@ -100,7 +100,7 @@ _sections_unfolded = [ "Visibility" ]
 position = Vector2( -0.0557717, 1.19581 )
 scale = Vector2( 1.01692, 1.01776 )
 build_mode = 0
-polygon = PoolVector2Array( 95.999, -49.8708, 59.6491, -49.5179, -14.1093, -47.4004, -65.6342, -47.7533, -96.6904, -34.6956, -96.5407, 8.37797, 94.1581, 8.37797 )
+polygon = PoolVector2Array( 84.6884, -48.2275, 59.6491, -49.5179, -14.1093, -47.4004, -65.6342, -47.7533, -80.3881, -36.6477, -77.5615, 7.41164, 83.2751, 7.69408 )
 
 [node name="Player" type="Node2D" parent="Node2D" index="2"]
 

@@ -9,9 +9,9 @@ func _ready():
 	charsetgen(15)
 
 
-func makechar(currentchar):
+func makechar(currentchar,target):
 	
-	for x in get_children():
+	for x in target.get_children():
 		x.frames.clear_all()
 		x.frames.add_animation('walk')
 		for y in range(8):
@@ -24,7 +24,7 @@ func makechar(currentchar):
 			
 			x.frames.add_frame('walk',tex)
 	print(characters)
-	colorchar(currentchar)
+	colorchar(currentchar,target)
 	
 func colorchar(character,ob=self):
 	for x in ob.get_children():

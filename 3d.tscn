@@ -155,7 +155,7 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Ambient Light", "Background" ]
 
-[node name="3d" type="Node"]
+[node name="3d" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -290,20 +290,13 @@ skeleton = NodePath("..")
 material/0 = ExtResource( 6 )
 _sections_unfolded = [ "Transform", "material" ]
 
-[node name="UI" type="Control" parent="." index="7"]
+[node name="UI" type="CanvasLayer" parent="." index="7"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Button" type="Button" parent="UI" index="0"]
 
