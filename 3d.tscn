@@ -3,10 +3,10 @@
 [ext_resource path="res://objects/tablescene/TableHandler.gd" type="Script" id=1]
 [ext_resource path="res://models/roundtable.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://objects/tablescene/CameraPivot.tscn" type="PackedScene" id=3]
-[ext_resource path="res://objects/window.tscn" type="PackedScene" id=4]
-[ext_resource path="res://hdri/rocky_ridge_1k.hdr" type="Texture" id=5]
-[ext_resource path="res://objects/room.obj" type="ArrayMesh" id=6]
-[ext_resource path="res://models/room.material" type="Material" id=7]
+[ext_resource path="res://hdri/rocky_ridge_1k.hdr" type="Texture" id=4]
+[ext_resource path="res://objects/room.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://models/room.material" type="Material" id=6]
+[ext_resource path="res://objects/tablescene/ShootButton.gd" type="Script" id=7]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -73,7 +73,7 @@ radius = 5.61969
 [sub_resource type="PanoramaSky" id=4]
 
 radiance_size = 4
-panorama = ExtResource( 5 )
+panorama = ExtResource( 4 )
 
 [sub_resource type="Environment" id=5]
 
@@ -243,9 +243,7 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 blend_times = [  ]
 
-[node name="window" parent="." index="4" instance=ExtResource( 4 )]
-
-[node name="OmniLight" type="OmniLight" parent="." index="5"]
+[node name="OmniLight" type="OmniLight" parent="." index="4"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.3111, 0 )
 layers = 1
@@ -268,11 +266,11 @@ omni_shadow_mode = 1
 omni_shadow_detail = 1
 _sections_unfolded = [ "Light", "Omni" ]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="6"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="5"]
 
 environment = SubResource( 5 )
 
-[node name="room" type="Spatial" parent="." index="7"]
+[node name="room" type="Spatial" parent="." index="6"]
 
 [node name="MeshInstance" type="MeshInstance" parent="room" index="0"]
 
@@ -286,9 +284,52 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 6 )
+mesh = ExtResource( 5 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 7 )
+material/0 = ExtResource( 6 )
 _sections_unfolded = [ "Transform", "material" ]
+
+[node name="UI" type="Control" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Button" type="Button" parent="UI" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 869.0
+margin_top = 496.0
+margin_right = 977.0
+margin_bottom = 544.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "SHOOT"
+flat = false
+align = 1
+script = ExtResource( 7 )
+
+[connection signal="pressed" from="UI/Button" to="UI/Button" method="_on_Button_pressed"]
 
 
