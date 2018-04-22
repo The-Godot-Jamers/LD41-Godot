@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://2d.gd" type="Script" id=1]
-[ext_resource path="res://objects/tileset.tres" type="TileSet" id=2]
-[ext_resource path="res://sprites/ground.png" type="Texture" id=3]
-[ext_resource path="res://sprites/player_green.png" type="Texture" id=4]
-[ext_resource path="res://sprites/crosshair_mask.png" type="Texture" id=5]
+[ext_resource path="res://sprites/ugly_bg.png" type="Texture" id=2]
+[ext_resource path="res://objects/tileset.tres" type="TileSet" id=3]
+[ext_resource path="res://sprites/ground.png" type="Texture" id=4]
+[ext_resource path="res://sprites/player_green.png" type="Texture" id=5]
+[ext_resource path="res://sprites/crosshair_mask.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
 
@@ -40,23 +41,30 @@ tracks/1/keys = {
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[node name="2d" type="Node" index="0"]
+[node name="2d" type="Node"]
 
 script = ExtResource( 1 )
 targets = 30
 
 [node name="Node2D" type="Node2D" parent="." index="0"]
 
-[node name="TileMap" type="TileMap" parent="Node2D" index="0"]
+[node name="background" type="Sprite" parent="Node2D" index="0"]
+
+scale = Vector2( 1.06422, 1 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="TileMap" type="TileMap" parent="Node2D" index="1"]
 
 mode = 0
-tile_set = ExtResource( 2 )
+tile_set = ExtResource( 3 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -74,12 +82,12 @@ format = 1
 tile_data = PoolIntArray( 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 983040, 0, 0, 983041, 0, 0, 983042, 0, 0, 983043, 0, 0, 983044, 0, 0, 983045, 0, 0, 983046, 0, 0, 983047, 0, 0, 983048, 0, 0, 983049, 0, 0, 983050, 0, 0, 983051, 0, 0, 983052, 0, 0, 983053, 0, 0, 983054, 0, 0, 983055, 0, 0, 983056, 0, 0, 983057, 0, 0, 983058, 0, 0, 983059, 0, 0, 983060, 0, 0, 983061, 0, 0, 983062, 0, 0, 983063, 0, 0, 983064, 0, 0, 983065, 0, 0, 983066, 0, 0, 983067, 0, 0, 983068, 0, 0, 983069, 0, 0, 983070, 0, 0, 983071, 0, 0, 983072, 0, 0, 1048576, 0, 0, 1048577, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048580, 0, 0, 1048581, 0, 0, 1048582, 0, 0, 1048583, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1048600, 0, 0, 1048601, 0, 0, 1048602, 0, 0, 1048603, 0, 0, 1048604, 0, 0, 1048605, 0, 0, 1048606, 0, 0, 1048607, 0, 0, 1048608, 0, 0, 1114112, 0, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0, 1114124, 0, 0, 1114125, 0, 0, 1114126, 0, 0, 1114127, 0, 0, 1114128, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1114135, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114138, 0, 0, 1114139, 0, 0, 1114140, 0, 0, 1114141, 0, 0, 1114142, 0, 0, 1114143, 0, 0, 1114144, 0, 0, 1179648, 0, 0, 1179649, 0, 0, 1179650, 0, 0, 1179651, 0, 0, 1179652, 0, 0, 1179653, 0, 0, 1179654, 0, 0, 1179655, 0, 0, 1179656, 0, 0, 1179657, 0, 0, 1179658, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, 0, 0, 1179671, 0, 0, 1179672, 0, 0, 1179673, 0, 0, 1179674, 0, 0, 1179675, 0, 0, 1179676, 0, 0, 1179677, 0, 0, 1179678, 0, 0, 1179679, 0, 0, 1179680, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245205, 0, 0 )
 _sections_unfolded = [ "Cell" ]
 
-[node name="Ground" type="Sprite" parent="Node2D" index="1"]
+[node name="Ground" type="Sprite" parent="Node2D" index="2"]
 
 visible = false
 position = Vector2( 516.247, 546.067 )
 scale = Vector2( 5.24387, 5.24387 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="SpawnArea" type="Polygon2D" parent="Node2D/Ground" index="0"]
@@ -97,7 +105,7 @@ texture_rotation_degrees = 0.0
 invert_enable = false
 invert_border = 100.0
 
-[node name="Player" type="Node2D" parent="Node2D" index="2"]
+[node name="Player" type="Node2D" parent="Node2D" index="3"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -127,7 +135,7 @@ show_behind_parent = true
 position = Vector2( 503, 511 )
 enabled = true
 editor_only = false
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 offset = Vector2( -13.0002, 18.9998 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )

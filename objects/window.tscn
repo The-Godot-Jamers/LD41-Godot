@@ -66,7 +66,7 @@ _sections_unfolded = [ "Albedo" ]
 
 render_priority = 0
 flags_transparent = false
-flags_unshaded = false
+flags_unshaded = true
 flags_vertex_lighting = false
 flags_no_depth_test = false
 flags_use_point_size = false
@@ -112,6 +112,7 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
+_sections_unfolded = [ "Parameters" ]
 
 [sub_resource type="PlaneMesh" id=3]
 
@@ -119,7 +120,7 @@ size = Vector2( 8, 4.5 )
 subdivide_width = 0
 subdivide_depth = 0
 
-[node name="window" type="Spatial"]
+[node name="window" type="Spatial" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.1119, 17.9865 )
 script = ExtResource( 1 )
@@ -167,7 +168,7 @@ world = null
 transparent_bg = false
 msaa = 0
 hdr = false
-disable_3d = false
+disable_3d = true
 usage = 0
 debug_draw = 0
 render_target_v_flip = true
@@ -175,7 +176,7 @@ render_target_clear_mode = 0
 render_target_update_mode = 2
 audio_listener_enable_2d = false
 audio_listener_enable_3d = false
-physics_object_picking = false
+physics_object_picking = true
 gui_disable_input = false
 gui_snap_controls_to_pixels = true
 shadow_atlas_size = 0
