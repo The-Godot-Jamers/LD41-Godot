@@ -2,7 +2,7 @@ extends Node
 
 var card_num=16
 var card_scene
-var cards_ins=[]
+var cards_ins
 var delay=10 #delay before fliping cards
 func _ready():
 	card_scene=load("res://objects/card.tscn")
@@ -13,6 +13,7 @@ func spawn_deck(cards):
 	var spawnpos=$CardLaybed/DeckPosition.global_transform
 	
 	#Cleaning cards if exist
+	cards_ins=[]
 	for x in $CardLaybed/CardHolder.get_children():
 		x.queue_free()
 	for x in range(cards):
