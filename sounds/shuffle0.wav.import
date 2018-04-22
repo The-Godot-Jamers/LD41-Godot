@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shuffle0.wav-f4d37f0a2b456a890060abf2a90dad3c.sample"
+
+[deps]
+
+source_file="res://sounds/shuffle0.wav"
+source_md5="030e6cfcb8d0a7c7b0febdd50d0d7841"
+
+dest_files=[ "res://.import/shuffle0.wav-f4d37f0a2b456a890060abf2a90dad3c.sample" ]
+dest_md5="4afd49e005203076d20b24553778cc46"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

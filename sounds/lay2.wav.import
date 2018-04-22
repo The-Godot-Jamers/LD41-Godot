@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/lay2.wav-392bc1cd93418d78d06b689d73bf8988.sample"
+
+[deps]
+
+source_file="res://sounds/lay2.wav"
+source_md5="ad6e76987f8ee9400304a10eb6ead2c2"
+
+dest_files=[ "res://.import/lay2.wav-392bc1cd93418d78d06b689d73bf8988.sample" ]
+dest_md5="14a3c165c0ca75511bcd3dc7095e8c6b"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

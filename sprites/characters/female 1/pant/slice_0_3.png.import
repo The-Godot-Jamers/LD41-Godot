@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/slice_0_3.png-428f546b3a3e98948ddb6e82745d4bfd.stex"
+
+[deps]
+
+source_file="res://sprites/characters/female 1/pant/slice_0_3.png"
+source_md5="d61541e3012fd870401f608da053d44d"
+
+dest_files=[ "res://.import/slice_0_3.png-428f546b3a3e98948ddb6e82745d4bfd.stex" ]
+dest_md5="2ac0e268710fe83985de4cc7ad02935d"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

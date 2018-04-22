@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/slice_0_5.png-fe3ce8ff6ebe933d5a63edeb0180daf3.stex"
+
+[deps]
+
+source_file="res://sprites/characters/female 1/shirt/slice_0_5.png"
+source_md5="7a9cb6744c6776e2409eeb3652060ed4"
+
+dest_files=[ "res://.import/slice_0_5.png-fe3ce8ff6ebe933d5a63edeb0180daf3.stex" ]
+dest_md5="3eb2f686a4fe1bffae8b85152a41fa2d"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

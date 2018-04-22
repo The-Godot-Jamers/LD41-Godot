@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/snipershot0.wav-a3b83d46e0b9736c22cf9bf6ca82bf83.sample"
+
+[deps]
+
+source_file="res://sounds/snipershot0.wav"
+source_md5="3ac63fceda81d8e691d1b41a88f21459"
+
+dest_files=[ "res://.import/snipershot0.wav-a3b83d46e0b9736c22cf9bf6ca82bf83.sample" ]
+dest_md5="320807efef675d0d720ef7df04f2cc87"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
