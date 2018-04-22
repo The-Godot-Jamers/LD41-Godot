@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 [gd_scene load_steps=13 format=2]
+=======
+[gd_scene load_steps=14 format=2]
+>>>>>>> master
 
 [ext_resource path="res://objects/card.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://sprites/card_top.png" type="Texture" id=3]
+<<<<<<< HEAD
 [ext_resource path="res://sprites/characters/female 1/body/slice_0_0.png" type="Texture" id=4]
+=======
+[ext_resource path="res://sounds/draw1.wav" type="AudioStream" id=4]
+[ext_resource path="res://sounds/draw2.wav" type="AudioStream" id=5]
+>>>>>>> master
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -579,6 +588,22 @@ playback_speed = 1.0
 playback/active = false
 playback/repeat = false
 playback/speed = 1.0
+
+[node name="draw1" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="draw2" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="input_event" from="Area" to="." method="_on_Area_input_event"]
 

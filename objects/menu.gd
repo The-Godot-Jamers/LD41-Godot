@@ -11,7 +11,7 @@ func _on_start():
 	$Tween.start()
 
 func _on_options():
-	pass
+	$click.play()
 
 func _on_quit():
 	get_tree().quit()
