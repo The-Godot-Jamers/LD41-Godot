@@ -1,11 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://objects/target.gd" type="Script" id=1]
-<<<<<<< Updated upstream
-=======
 [ext_resource path="res://sprites/target.png" type="Texture" id=2]
->>>>>>> Stashed changes
-
 [sub_resource type="Animation" id=1]
 
 resource_name = "death"

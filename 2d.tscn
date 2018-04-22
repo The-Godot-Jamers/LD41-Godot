@@ -45,7 +45,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="2d" type="Node"]
+[node name="2d" type="Node" index="0"]
 
 script = ExtResource( 1 )
 targets = 30
