@@ -1,6 +1,6 @@
 extends Node
 
-var card_num=25
+var card_num=16
 var card_scene
 var cards_ins=[]
 var delay=10 #delay before fliping cards
@@ -11,6 +11,10 @@ func _ready():
 
 func spawn_deck(cards):
 	var spawnpos=$CardLaybed/DeckPosition.global_transform
+	
+	#Cleaning cards if exist
+	for x in $CardLaybed/CardHolder.get_children():
+		x.queue_free()
 	for x in range(cards):
 		var card_instance=card_scene.instance()
 		$CardLaybed/CardHolder.add_child(card_instance)

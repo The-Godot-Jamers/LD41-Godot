@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/WIP_Intro.ogg-27ab9fdd665e09b282efb5a9a1dd5bb3.oggstr"
+
+[deps]
+
+source_file="res://music/WIP_Intro.ogg"
+source_md5="8f8eb11d612c6a4b42aaad188b9a96d5"
+
+dest_files=[ "res://.import/WIP_Intro.ogg-27ab9fdd665e09b282efb5a9a1dd5bb3.oggstr" ]
+dest_md5="e0c6c7632d4bb796cfd85438d7dfd5c8"
+
+[params]
+
+loop=true
+loop_offset=0
