@@ -3,6 +3,7 @@ extends Node
 var card_num=16
 var card_scene
 var cards_ins
+var show_card
 var delay=10 #delay before fliping cards
 func _ready():
 	card_scene=load("res://objects/card.tscn")
@@ -14,16 +15,27 @@ func spawn_deck(cards):
 	
 	#Cleaning cards if exist
 	cards_ins=[]
+		#show card
+	show_card=card_scene.instance()
+	$CameraPivot/Camera.add_child(show_card)
+	show_card.flippable = false
+	show_card.translation = Vector3(0.0,-0.3,-0.25)
+	show_card.rotation = Vector3(-80.0,0.0,0.0)
+	show_card.scale = Vector3(0.1,0.1,0.1)
 	for x in $CardLaybed/CardHolder.get_children():
 		x.queue_free()
 	for x in range(cards):
 		var card_instance=card_scene.instance()
 		$CardLaybed/CardHolder.add_child(card_instance)
+		card_instance.flippable = true
 		card_instance.flipping = true
 		cards_ins.append(card_instance)
 		card_instance.global_transform=spawnpos
 		card_instance.translation.y+=x*0.1
 		#card_instance.flip()
+		card_instance.show_card = show_card
+		card_instance.connect("hide",show_card,"hide")
+		card_instance.connect("show",show_card,"show")
 	position_cards(cards)
 	
 

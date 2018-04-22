@@ -1,0 +1,137 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://objects/sprite_shader_test.shader" type="Shader" id=1]
+[ext_resource path="res://sprites/LD41MartialArtMasters.png" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://sprites/characters/Guy.png" type="Texture" id=4]
+[ext_resource path="res://objects/face_shadertest.shader" type="Shader" id=5]
+[ext_resource path="res://sprites/characters/facetest.png" type="Texture" id=6]
+[ext_resource path="res://objects/ladyshader.shader" type="Shader" id=7]
+[ext_resource path="res://sprites/characters/testlady.png" type="Texture" id=8]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/hippy = false
+shader_param/col1 = Color( 0.140625, 0.00769043, 0.00769043, 1 )
+shader_param/col2 = Color( 0.0820313, 0.00865173, 0.00865173, 1 )
+shader_param/col3 = Color( 0.134078, 0.144531, 0.0107269, 1 )
+shader_param/col4 = Color( 0.144531, 0.0737169, 0.00508118, 1 )
+shader_param/col5 = Color( 0.484375, 0.372727, 0.312195, 1 )
+shader_param/col6 = null
+shader_param/col7 = null
+shader_param/col8 = null
+shader_param/col9 = null
+shader_param/col0 = null
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/hippy = null
+shader_param/col1 = Color( 0.863281, 0.0404663, 0.0404663, 1 )
+shader_param/col2 = Color( 0.319565, 0.690321, 0.699219, 1 )
+shader_param/col3 = Color( 0.580108, 0.0888062, 0.757813, 1 )
+shader_param/col4 = Color( 1, 1, 1, 1 )
+shader_param/col5 = Color( 0.265625, 1, 0, 1 )
+shader_param/col6 = null
+shader_param/col7 = null
+shader_param/col8 = null
+shader_param/col9 = null
+shader_param/col0 = null
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="ShaderMaterial" id=3]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/hippy = false
+shader_param/col1 = Color( 0.015625, 0.015625, 0.015625, 1 )
+shader_param/col2 = Color( 0.175781, 0.0642014, 0.0384521, 1 )
+shader_param/col3 = Color( 0.324219, 0.00253296, 0.00253296, 1 )
+shader_param/col4 = Color( 0.265625, 0.124042, 0.010376, 1 )
+shader_param/col5 = Color( 0.00494385, 0.00953007, 0.046875, 1 )
+shader_param/col6 = null
+shader_param/col7 = null
+shader_param/col8 = null
+shader_param/col9 = null
+shader_param/col0 = null
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="ShaderMaterial" id=4]
+
+render_priority = 0
+shader = ExtResource( 5 )
+shader_param/hippy = null
+shader_param/col1 = Color( 1, 0.820313, 0, 1 )
+shader_param/col2 = Color( 0, 0, 0, 1 )
+shader_param/col3 = Color( 0.183088, 0.176471, 0.388235, 1 )
+shader_param/col4 = Color( 1, 0.543762, 0.101563, 1 )
+shader_param/col5 = Color( 0.976563, 0, 0, 1 )
+shader_param/col6 = Color( 0.125824, 0.242188, 0.242188, 1 )
+shader_param/col7 = Color( 0.00704956, 0.00828218, 0.0859375, 1 )
+shader_param/col8 = Color( 0.18631, 0.722656, 0.282685, 1 )
+shader_param/col9 = null
+shader_param/col0 = Color( 1, 0.784314, 0.45098, 1 )
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="ShaderMaterial" id=5]
+
+render_priority = 0
+shader = ExtResource( 7 )
+shader_param/hippy = null
+shader_param/col1 = Color( 1, 0.938721, 0.0195313, 1 )
+shader_param/col2 = Color( 1, 0.0117188, 0.0117188, 1 )
+shader_param/col3 = Color( 0.333191, 0.402344, 0.335892, 1 )
+shader_param/col4 = Color( 0, 0, 0, 1 )
+shader_param/col5 = Color( 0.258741, 0.200226, 0.949219, 1 )
+shader_param/col6 = Color( 0.385011, 0.871094, 0.330063, 1 )
+shader_param/col7 = Color( 0, 0, 0, 1 )
+shader_param/col8 = null
+shader_param/col9 = null
+shader_param/col0 = null
+_sections_unfolded = [ "shader_param" ]
+
+[node name="sprite_shader_test" type="Node2D" index="0"]
+
+_sections_unfolded = [ "Material" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+material = SubResource( 1 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Material", "Offset" ]
+
+[node name="Sprite2" type="Sprite" parent="." index="1"]
+
+modulate = Color( 0.298039, 0.298039, 0.298039, 1 )
+material = SubResource( 2 )
+position = Vector2( 694.899, 329.034 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="Guy" type="Sprite" parent="." index="2"]
+
+material = SubResource( 3 )
+position = Vector2( 686.097, 458.734 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Material" ]
+
+[node name="facetest" type="Sprite" parent="." index="3"]
+
+material = SubResource( 4 )
+position = Vector2( 991.561, 897.357 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Material" ]
+
+[node name="Sprite3" type="Sprite" parent="." index="4"]
+
+material = SubResource( 5 )
+position = Vector2( 410.04, 941.363 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+

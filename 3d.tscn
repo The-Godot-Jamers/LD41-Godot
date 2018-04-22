@@ -155,7 +155,7 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Ambient Light", "Background" ]
 
-[node name="3d" type="Node"]
+[node name="3d" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -202,6 +202,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.18356, 0 )
 
 [node name="Area" type="Area" parent="CardLaybed" index="0"]
 
+editor/display_folded = true
 input_ray_pickable = false
 input_capture_on_drag = false
 space_override = 0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=1]
 
 render_priority = 0
 flags_transparent = false
@@ -52,15 +52,15 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo", "Metallic", "Roughness" ]
 
-[sub_resource type="CubeMesh" id=8]
+[sub_resource type="CubeMesh" id=2]
 
-material = SubResource( 7 )
+material = SubResource( 1 )
 size = Vector3( 2, 2, 2 )
 subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-[sub_resource type="SpatialMaterial" id=13]
+[sub_resource type="SpatialMaterial" id=3]
 
 render_priority = 0
 flags_transparent = true
@@ -113,9 +113,9 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo", "Anisotropy", "Metallic", "Roughness" ]
 
-[sub_resource type="CubeMesh" id=14]
+[sub_resource type="CubeMesh" id=4]
 
-material = SubResource( 13 )
+material = SubResource( 3 )
 size = Vector3( 6, 10, 0.1 )
 subdivide_width = 0
 subdivide_height = 0
@@ -134,7 +134,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 8 )
+mesh = SubResource( 2 )
 skeleton = NodePath("..")
 material/0 = null
 _sections_unfolded = [ "material" ]
@@ -151,7 +151,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 14 )
+mesh = SubResource( 4 )
 skeleton = NodePath("..")
 material/0 = null
 

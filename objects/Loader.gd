@@ -4,9 +4,8 @@ extends Node2D
 # var a = 2
 # var b = "textvar"
 var thread
+var scn
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
 	$CanvasLayer/Sprite.position=get_viewport().get_texture().get_size()/2
 
 #func _process(delta):
@@ -14,11 +13,13 @@ func _ready():
 #	# Update game logic here.
 #	pa
 func loadscn(path):
-	thread=Thread.new()
-	thread.start(self,'fadeloader',path)
+	if $CanvasLayer/AnimationPlayer.is_playing():
+		pass
+	else:
+		thread=Thread.new()
+		thread.start(self,'fadeloader',path)
 func fadeloader(path):
-	
-	var scn=load(path)
+	scn=load(path)
 	var t=get_viewport().get_texture().get_data()
 	t.flip_y()
 	var im=ImageTexture.new()
@@ -26,5 +27,6 @@ func fadeloader(path):
 	$CanvasLayer/Sprite.texture=im
 	$CanvasLayer/Sprite.self_modulate.a=1
 	yield(get_tree(),'idle_frame')
-	get_tree().change_scene_to(scn)
 	$CanvasLayer/AnimationPlayer.play("fade")
+	get_tree().change_scene_to(scn)
+	
