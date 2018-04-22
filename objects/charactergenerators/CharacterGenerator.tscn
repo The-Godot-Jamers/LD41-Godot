@@ -105,33 +105,11 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="CharacterGenerator" type="Viewport"]
+[node name="CharacterGenerator" type="Node2D"]
 
-arvr = false
-size = Vector2( 0, 0 )
-own_world = false
-world = null
-transparent_bg = false
-msaa = 0
-hdr = true
-disable_3d = true
-usage = 0
-debug_draw = 0
-render_target_v_flip = true
-render_target_clear_mode = 0
-render_target_update_mode = 2
-audio_listener_enable_2d = false
-audio_listener_enable_3d = false
-physics_object_picking = false
-gui_disable_input = false
-gui_snap_controls_to_pixels = true
-shadow_atlas_size = 0
-shadow_atlas_quad_0 = 2
-shadow_atlas_quad_1 = 2
-shadow_atlas_quad_2 = 3
-shadow_atlas_quad_3 = 4
+visible = false
 script = ExtResource( 1 )
-_sections_unfolded = [ "Audio Listener", "Physics", "Render Target", "Rendering" ]
+_sections_unfolded = [ "Audio Listener", "GUI", "Physics", "Render Target", "Rendering", "Shadow Atlas" ]
 
 [node name="hair" type="AnimatedSprite" parent="." index="0"]
 
@@ -162,5 +140,31 @@ animation = "default"
 
 frames = SubResource( 6 )
 animation = "default"
+
+[node name="Camera2D" type="Camera2D" parent="." index="6"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Editor" ]
 
 

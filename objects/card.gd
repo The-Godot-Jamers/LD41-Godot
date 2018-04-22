@@ -4,6 +4,8 @@ var is_flipped = false
 var flipping = false
 var flippable 
 var show_card 
+var characterid
+
 signal hide
 signal show
 
@@ -22,8 +24,9 @@ func flip_back():
 		$Area/MeshInstance/AnimationPlayer.play("flip back")
 	
 
-func show():
+func show(charid):
 	print("show")
+	CharacterGenerator.makecardspr(CharacterGenerator.characters[charid],self)
 	$Tween.interpolate_property(self,"translation",Vector3(0.0,-0.3,-0.25),Vector3(0.0,-0.1,-0.25),1.0,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	$Tween.start()
 func hide():

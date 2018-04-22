@@ -36,7 +36,9 @@ func spawn_deck(cards):
 		#card_instance.flip()
 		card_instance.show_card = show_card
 		card_instance.connect("hide",show_card,"hide")
-		card_instance.connect("show",show_card,"show")
+		card_instance.characterid=x
+		card_instance.connect("show",show_card,"show",[card_instance.characterid])
+		CharacterGenerator.makecardspr(CharacterGenerator.characters[x],card_instance)
 	position_cards(cards)
 	
 

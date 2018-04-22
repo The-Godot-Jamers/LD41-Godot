@@ -1,4 +1,4 @@
-extends Viewport
+extends Node2D
 
 var characters=[]
 var bodycolor='lightpink'
@@ -26,11 +26,12 @@ func makechar(currentchar):
 	print(characters)
 	colorchar(currentchar)
 	
-func colorchar(character):
-	for x in get_children():
-		randomize()
+func colorchar(character,ob=self):
+	for x in ob.get_children():
+		#randomize()
 		x.modulate=character[x.name]
-		x.play('walk')
+		if x.has_method('play'):
+			x.play('walk')
 
 func charsetgen(num):
 	characters.clear()
@@ -55,4 +56,18 @@ func chargen():
 		else:
 			currentchar[x]=ColorN(bodycolor)
 	return currentchar
+	
+func makecardspr(currentchar,card):
+	for x in card.get_node('Area/MeshInstance/character').get_children():
+		
+		var path="res://sprites/characters/"+currentchar.chartype+'/'+x.name+'/slice_0_0'+'.png'
+			#print(path)
+		var im=Image.new()
+		im.load(path)
+		var tex=ImageTexture.new()
+		tex.create_from_image(im)
+		x.texture=tex
+	print(characters)
+	colorchar(currentchar,card.get_node('Area/MeshInstance/character'))
+	
 	
