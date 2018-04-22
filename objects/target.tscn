@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://objects/target.gd" type="Script" id=1]
-[ext_resource path="res://sprites/target.png" type="Texture" id=2]
+[ext_resource path="res://sprites/characters/male 1/body.png" type="Texture" id=2]
+[ext_resource path="res://sprites/characters/male 1/skin.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 
@@ -131,9 +132,17 @@ scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 4 )
 animation = "default"
 offset = Vector2( -17.1487, 1.61696 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Area2D" type="Area2D" parent="AnimatedSprite" index="0"]
+[node name="skin" type="Sprite" parent="AnimatedSprite" index="0"]
+
+show_behind_parent = true
+position = Vector2( -0.994019, -216.666 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite" index="1"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -148,7 +157,7 @@ audio_bus_name = "Master"
 position = Vector2( -40.1752, 72.4116 )
 scale = Vector2( 5, 5 )
 build_mode = 0
-polygon = PoolVector2Array( 1.90735e-06, -60, -5.54893, -52.0575, -5.19044, -43.4538, -0.888624, -35.2087, -8.41681, -31.6238, -12.7186, -21.9447, -14.8696, -0.435608, -6.62439, -0.435608, -3.39802, 31.8281, 3.05471, 32.1866, 14.1678, 31.8281, 15.9602, 0.281357, 24.9223, -0.0771255, 23.4884, -21.2278, 17.7526, -32.3408, 9.86595, -34.4917, 14.5263, -44.5293, 13.8093, -53.133, 8.79048, -59.5857 )
+polygon = PoolVector2Array( 19.7615, -109.449, -0.578232, -107.318, -12.5884, -97.8265, -3.5883, -68.7247, -19.7605, -60.163, -18.8092, -31.8616, -9.29615, -21.3972, -6.91787, 27.1195, -19.0471, 41.627, 27.8049, 39.7244, 25.1888, -9.74364, 24.9509, -27.105, 31.1345, -30.1968, 33.7505, -63.2547, 23.2862, -64.4439, 13.7731, -74.4326, 25.1854, -86.785 )
 
 [node name="Timer" type="Timer" parent="." index="2"]
 

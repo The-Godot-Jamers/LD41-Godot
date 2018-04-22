@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/skin.png-60e1d5296fb1e1e61c5424538cb3df2a.stex"
+
+[deps]
+
+source_file="res://sprites/characters/male 1/skin.png"
+source_md5="1750d8a6d007cfb973a1012e6cb44261"
+
+dest_files=[ "res://.import/skin.png-60e1d5296fb1e1e61c5424538cb3df2a.stex" ]
+dest_md5="e8d4cc50efcc5378b59ea936ff48a784"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
