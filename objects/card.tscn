@@ -127,7 +127,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0.1, 0 ), Vector3( 0, 0.1, 0 ), Vector3( 0, 0.1, 0 ), Vector3( 0, 0.1, 0 ), Vector3( 0, 0.1, 0 ) ]
+"values": [ Vector3( 0, 0.1, 0 ), Vector3( 0, 0.02, 0 ), Vector3( 0, 0.02, 0 ), Vector3( 0, 0.02, 0 ), Vector3( 0, 0.02, 0 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("card_bottom:rotation_degrees")
@@ -140,6 +140,30 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( -90, 0, 0 ), Vector3( -90, 0, 0 ), Vector3( -90, 0, 0 ), Vector3( -90, 0, 0 ), Vector3( -90, 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("card_top:translation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -0.02, 0 ), Vector3( 0, -0.02, 0 ), Vector3( 0, -0.02, 0 ), Vector3( 0, -0.02, 0 ), Vector3( 0, -0.02, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("card_top:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 90, 0, 0 ), Vector3( 90, 0, 0 ), Vector3( 90, 0, 0 ), Vector3( 90, 0, 0 ), Vector3( 90, 0, 0 ) ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -181,7 +205,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0.1, 0 ), Vector3( 0, 0.1, 0 ), Vector3( 0, 0.1, 0 ), Vector3( 0, 0.1, 0 ), Vector3( 0, 0.1, 0 ) ]
+"values": [ Vector3( 0, 0.02, 0 ), Vector3( 0, 0.02, 0 ), Vector3( 0, 0.02, 0 ), Vector3( 0, 0.02, 0 ), Vector3( 0, 0.02, 0 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("card_bottom:rotation_degrees")
@@ -195,6 +219,30 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector3( -90, 0, 0 ), Vector3( -90, 0, 0 ), Vector3( -90, 0, 0 ), Vector3( -90, 0, 0 ), Vector3( -90, 0, 0 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("card_top:translation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -0.02, 0 ), Vector3( 0, -0.02, 0 ), Vector3( 0, -0.02, 0 ), Vector3( 0, -0.02, 0 ), Vector3( 0, -0.02, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("card_top:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 90, 0, 0 ), Vector3( 90, 0, 0 ), Vector3( 90, 0, 0 ), Vector3( 90, 0, 0 ), Vector3( 90, 0, 0 ) ]
+}
 
 [sub_resource type="BoxShape" id=7]
 
@@ -202,7 +250,7 @@ resource_local_to_scene = true
 extents = Vector3( 0.5, 0.025, 0.75 )
 _sections_unfolded = [ "Resource" ]
 
-[node name="card" type="Spatial"]
+[node name="card" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -233,7 +281,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="Area" index="0"]
 
-transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -250,7 +297,7 @@ _sections_unfolded = [ "Transform", "material" ]
 
 [node name="card_bottom" type="Sprite3D" parent="Area/MeshInstance" index="0"]
 
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.1, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.02, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1
