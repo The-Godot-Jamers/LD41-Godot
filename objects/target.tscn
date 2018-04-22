@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://objects/target.gd" type="Script" id=1]
 [ext_resource path="res://sprites/target.png" type="Texture" id=2]
+
 [sub_resource type="Animation" id=1]
 
 resource_name = "death"
@@ -98,13 +99,13 @@ tracks/1/keys = {
 [sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
-"frames": [ null ],
+"frames": [ ExtResource( 2 ), null ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[node name="target" type="Node2D" index="0"]
+[node name="target" type="Node2D"]
 
 position = Vector2( 37.7115, 2.34138 )
 script = ExtResource( 1 )
