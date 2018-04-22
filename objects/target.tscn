@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://objects/target.gd" type="Script" id=1]
-[ext_resource path="res://sprites/characters/male 1/body.png" type="Texture" id=2]
-[ext_resource path="res://sprites/characters/male 1/skin.png" type="Texture" id=3]
+[ext_resource path="res://sprites/characters/male 1/skin.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=1]
 
@@ -100,7 +99,7 @@ tracks/1/keys = {
 [sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), null ],
+"frames": [ null, null ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -138,8 +137,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 show_behind_parent = true
 position = Vector2( -0.994019, -216.666 )
-scale = Vector2( 1, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite" index="1"]

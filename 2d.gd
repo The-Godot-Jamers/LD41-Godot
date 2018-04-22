@@ -83,6 +83,7 @@ func spawn_targets(number):
 		#print(spawn_area.position)
 		$CharacterHolder.add_child(target)
 		targets_array.append(target)
+		
 func randompoint():
 	randomize()
 	var x=randi()%int(get_viewport_rect().size.x)
