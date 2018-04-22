@@ -17,6 +17,7 @@ func _on_quit():
 	get_tree().quit()
 
 func _on_Tween_tween_completed(object, key):
+	$shuffle_sound.play()
 	modulate = Color(1.0,1.0,1.0,1.0)
 	get_parent().get_parent().hide()
 	get_node("../../../../../3d").spawn_deck(25)
