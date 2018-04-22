@@ -64,7 +64,7 @@ func check_distance(pos, array, distance):
 
 func spawn_targets(number):
 	used_pos = []
-	for i in range(0, number - 1):
+	for i in range(0, number ):
 		#prints("make target number", i)
 		#var pos_id = random_pos_in_spawn_area()
 		var pos = random_pos_in_spawn_Area_new()
