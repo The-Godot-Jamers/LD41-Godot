@@ -6,6 +6,7 @@ func _ready():
 	$QuitButton/quit.connect("pressed", self, "_on_quit")
 
 func _on_start():
+	Globals.level+=1
 	$Tween.interpolate_property(self, "modulate", Color(1.0,1.0,1.0,1.0), Color(1.0,1.0,1.0,0.0), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	$Tween.start()
 

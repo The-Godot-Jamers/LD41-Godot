@@ -1,6 +1,6 @@
 extends Node2D
 
-export(int) var targets = 16
+export(int) var targets = 16 
 var used_pos = PoolVector2Array()
 var target_tscn = preload("res://objects/target.tscn")
 var targets_array = []
@@ -11,6 +11,7 @@ onready var crosshair = $Node2D/Player/Crosshair
 onready var crosshair_area = $Node2D/Player/Crosshair/Area2D
 
 func _ready():
+	targets=Globals.characterno
 	# connet to right signal
 	crosshair_area.connect("area_entered", self, "_on_crosshair_arena_enter")
 	crosshair_area.connect("area_exited", self, "_on_crosshair_arena_exit")

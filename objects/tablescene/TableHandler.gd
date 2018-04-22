@@ -11,6 +11,7 @@ func _ready():
 
 
 func spawn_deck(cards):
+	cards=Globals.characterno
 	var spawnpos=$CardLaybed/DeckPosition.global_transform
 	
 	#Cleaning cards if exist

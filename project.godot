@@ -17,6 +17,8 @@ config/icon="res://icon.png"
 [autoload]
 
 loader="*res://objects/loader.tscn"
+CharacterGenerator="*res://objects/charactergenerators/CharacterGenerator.tscn"
+Globals="*res://objects/Globals.gd"
 
 [display]
 
