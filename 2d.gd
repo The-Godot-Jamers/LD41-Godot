@@ -1,6 +1,6 @@
-extends Node
+extends Node2D
 
-export(int) var targets = 30
+export(int) var targets = 16
 var used_pos = PoolVector2Array()
 var target_tscn = preload("res://objects/target.tscn")
 var targets_array = []
@@ -65,13 +65,13 @@ func spawn_targets(number):
 	used_pos = []
 	for i in range(0, number - 1):
 		#prints("make target number", i)
-		var pos_id = random_pos_in_spawn_area()
-		var pos = spawn_area.polygon[pos_id]
+		#var pos_id = random_pos_in_spawn_area()
+		var pos = random_pos_in_spawn_Area_new()
 		
 		if !used_pos.empty():
-			while check_distance(pos, used_pos, 25):
-				pos_id = random_pos_in_spawn_area()
-				pos = spawn_area.polygon[pos_id]
+			while check_distance(pos, used_pos, 300):
+				#pos_id = random_pos_in_spawn_area()
+				pos = random_pos_in_spawn_Area_new()
 		
 		used_pos.append(pos)
 		
@@ -79,10 +79,28 @@ func spawn_targets(number):
 
 		var target = target_tscn.instance()
 		target.id = i
-		target.position = spawn_area.global_position
-		target.position += spawn_area.polygon[pos_id]
+		target.global_position=pos
 		#print(spawn_area.position)
-		add_child(target)
+		$CharacterHolder.add_child(target)
 		targets_array.append(target)
+func randompoint():
+	randomize()
+	var x=randi()%int(get_viewport_rect().size.x)
+	randomize()
+	var y=randi()%int(get_viewport_rect().size.y)
+	return(Vector2(x,y))
 
-		
+func random_pos_in_spawn_Area_new():
+	var state=get_world_2d().direct_space_state
+	var p=randompoint()
+	var ar=state.intersect_point( p)
+	var f=true
+	while f:
+		p=randompoint()
+		ar=state.intersect_point(p)
+		for x in ar:
+			if x.collider.is_in_group('spawn_Area'):
+				f=false
+				break
+	return p
+	

@@ -127,7 +127,7 @@ blend_times = [  ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
 
-position = Vector2( 0.323532, -16.8237 )
+position = Vector2( -2.14383, -16.8237 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 4 )
 animation = "default"
