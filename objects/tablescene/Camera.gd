@@ -2,6 +2,7 @@ extends Camera
 
 export var Rotation_Speed=0.01
 var looking_at_table = true
+var maximum_zoom=5
 
 func _ready():
 
@@ -16,7 +17,8 @@ func _process(delta):
 		turn_right(delta)
 	if Input.is_action_pressed("cam_zoom_in"):
 		#translation=translation*0.95
-		$Tween.interpolate_property(self,'translation',translation,translation*0.9,1,Tween.TRANS_EXPO,Tween.EASE_OUT,0)
+		if translation.length()>maximum_zoom:
+			$Tween.interpolate_property(self,'translation',translation,translation*0.9,1,Tween.TRANS_EXPO,Tween.EASE_OUT,0)
 	if Input.is_action_pressed("cam_zoom_out"):
 		#translation=translation*1.05
 		$Tween.interpolate_property(self,'translation',translation,translation*1.1,1,Tween.TRANS_EXPO,Tween.EASE_OUT,0)
