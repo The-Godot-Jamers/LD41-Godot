@@ -20,11 +20,12 @@ func makechar(currentchar,target):
 			
 			var path="res://sprites/characters/"+currentchar.chartype+'/'+x.name+'/slice_0_'+str(y)+'.png'
 			#print(path)
-			var im=Image.new()
-			im.load(path)
-			var tex=ImageTexture.new()
-			tex.create_from_image(im)
+#			var im=Image.new()
+#			im.load(path)
+#			var tex=ImageTexture.new()
+#			tex.create_from_image(im)
 			
+			var tex=ResourceLoader.load(path)
 			x.frames.add_frame('walk',tex)
 	#print(characters)
 	colorchar(currentchar,target)
@@ -64,11 +65,12 @@ func makecardspr(currentchar,card):
 	for x in card.get_node('Area/MeshInstance/character').get_children():
 		
 		var path="res://sprites/characters/"+currentchar.chartype+'/'+x.name+'/slice_0_0'+'.png'
-			#print(path)
-		var im=Image.new()
-		im.load(path)
-		var tex=ImageTexture.new()
-		tex.create_from_image(im)
+#			#print(path)
+#		var im=Image.new()
+#		im.load(path)
+#		var tex=ImageTexture.new()
+#		tex.create_from_image(im)
+		var tex=ResourceLoader.load(path)
 		x.texture=tex
 	#print(characters)
 	colorchar(currentchar,card.get_node('Area/MeshInstance/character'))
