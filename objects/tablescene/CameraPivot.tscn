@@ -64,7 +64,7 @@ tracks/1/keys = {
 "values": [ Vector3( 0, 179.248, 0 ), Vector3( -30, 0, 0 ) ]
 }
 
-[node name="CameraPivot" type="Position3D" index="0"]
+[node name="CameraPivot" type="Position3D"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.8145, 0 )
 _sections_unfolded = [ "Transform" ]
