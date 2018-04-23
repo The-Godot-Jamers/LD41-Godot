@@ -26,18 +26,16 @@ func _on_anim_finish(anim_name):
 	if anim_name == "death":
 		death = true
 
-func shoot(hit):
+func shoot():
 	if death:
 		return
 		
 	if $AnimationPlayer.current_animation == "death":
 		return
 	
-	if hit:
-		$AnimationPlayer.play("death")
-		set_process_input(false)
-	else:
-		$AnimationPlayer.play("miss")
+	$AnimationPlayer.play("death")
+	set_process_input(false)
+
 		
 func changeid(nid):
 	id=nid

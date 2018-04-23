@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://2d.gd" type="Script" id=1]
 [ext_resource path="res://objects/tileset.tres" type="TileSet" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://sprites/better_bg.png" type="Texture" id=4]
 [ext_resource path="res://sprites/ugly_bg.png" type="Texture" id=5]
 [ext_resource path="res://sprites/crosshair_mask.png" type="Texture" id=6]
+[ext_resource path="res://sounds/snipershot0.wav" type="AudioStream" id=7]
 
 [sub_resource type="Animation" id=1]
 
@@ -52,7 +53,7 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="2d" type="Node2D" index="0"]
+[node name="2d" type="Node2D"]
 
 script = ExtResource( 1 )
 targets = 16
@@ -84,6 +85,7 @@ _sections_unfolded = [ "Cell" ]
 "spawn_Area",
 ]]
 
+editor/display_folded = true
 position = Vector2( 516.247, 550.067 )
 scale = Vector2( 5.24387, 5.24387 )
 input_pickable = true
@@ -104,6 +106,7 @@ polygon = PoolVector2Array( 84.6884, -48.2275, 59.6491, -49.5179, -14.1093, -47.
 
 [node name="Player" type="Node2D" parent="Node2D" index="2"]
 
+editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Player" index="0"]
@@ -141,6 +144,7 @@ texture = ExtResource( 5 )
 
 [node name="Crosshair" type="Light2D" parent="Node2D/Player" index="4"]
 
+editor/display_folded = true
 show_behind_parent = true
 position = Vector2( 503, 511 )
 enabled = true
@@ -184,5 +188,13 @@ shape = SubResource( 3 )
 [node name="CharacterHolder" type="YSort" parent="." index="1"]
 
 sort_enabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 7 )
+volume_db = 24.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 

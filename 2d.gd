@@ -36,17 +36,22 @@ func _input(event):
 			for t in targets_in_line:
 				most_front_id = max(most_front_id, t.id)
 			
-			targets_array[most_front_id].shoot(true)
+			$AudioStreamPlayer.play()
+			targets_array[most_front_id].shoot()
 
 func _on_crosshair_arena_enter(area):
-	if area.owner in targets_array:
-		if !(area.owner in targets_in_line):
-			targets_in_line.append(area.owner)
+	var o = area.owner
+	
+	if o in targets_array:
+		if !(o in targets_in_line):
+			targets_in_line.append(o)
 
 func _on_crosshair_arena_exit(area):
-	if area.owner in targets_array:
-		if area.owner in targets_in_line:
-			var t_id = targets_in_line.find(area.owner)
+	var o = area.owner
+	
+	if o in targets_array:
+		if o in targets_in_line:
+			var t_id = targets_in_line.find(o)
 			targets_in_line.remove(t_id)
 
 func random_pos_in_spawn_area():
