@@ -51,7 +51,6 @@ func _on_Area_input_event(camera, event, click_position, click_normal, shape_idx
 				emit_signal("show")
 				flip_back() #sounds wrong way but its not
 			is_flipped = !is_flipped
-	
 
 func _on_Area_mouse_entered():
 	$Area/MeshInstance.get_surface_material(0).set_shader_param("mouse_over", true)
@@ -69,11 +68,14 @@ func _on_accept_pressed():
 	$Tween.interpolate_property(self,"translation",Vector3(0.0,-0.1,-0.25),Vector3(0.0,-0.3,-0.25),1.0,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	$selection.hide()
 	flip_back()
+	tablehandler.cards_ins[characterid].lockcard()
 func _on_put_down_pressed():
 	tablehandler.flip_card(characterid)
 	flip_back()
 	$Tween.interpolate_property(self,"translation",Vector3(0.0,-0.1,-0.25),Vector3(0.0,-0.3,-0.25),1.0,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	$selection.hide()
 	
+func lockcard():
+	$Area.disconnect("input_event",self,"_on_Area_input_event")
 
 
