@@ -156,7 +156,7 @@ adjustment_contrast = 1.0
 adjustment_saturation = 1.0
 _sections_unfolded = [ "Ambient Light", "Background" ]
 
-[node name="3d" type="Node" index="0"]
+[node name="3d" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -196,6 +196,8 @@ disabled = false
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="CameraPivot" parent="." index="1" instance=ExtResource( 3 )]
+
+transform = Transform( 0.906308, 0, 0.422618, 0, 1, 0, -0.422618, 0, 0.906308, 0, 6.8145, 0 )
 
 [node name="CardLaybed" type="Spatial" parent="." index="2"]
 

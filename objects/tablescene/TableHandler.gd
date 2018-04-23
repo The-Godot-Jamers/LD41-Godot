@@ -137,7 +137,7 @@ func cardselect(val):
 		add_child(tim)
 		tim.wait_time=1
 		tim.one_shot=true
-		for x in range(15,0,-1):
+		for x in range(10,0,-1):
 			tim.start()
 			$"UI/Level indicator".text="Shooting Start in "+str(x)+" seconds!"
 			yield(tim,"timeout")
