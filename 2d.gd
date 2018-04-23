@@ -34,7 +34,8 @@ func _input(event):
 		crosshair.global_position = event.global_position
 
 	if event is InputEventMouseButton:
-		if event.button_index == BUTTON_LEFT:
+		#if event.button_index == BUTTON_LEFT:
+		if Input.is_action_just_pressed("mouse_left"):
 			var most_front_id = 0
 			for t in targets_in_line:
 				most_front_id = max(most_front_id, t.id)
