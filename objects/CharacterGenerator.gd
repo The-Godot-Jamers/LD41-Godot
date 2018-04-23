@@ -10,13 +10,16 @@ func _ready():
 
 
 func makechar(currentchar,target):
-	print(currentchar)
+	#print(currentchar)
 	for x in target.get_children():
+		var sprf=SpriteFrames.new()
+		x.frames=sprf
 		x.frames.clear_all()
 		x.frames.add_animation('walk')
 		for y in range(8):
+			
 			var path="res://sprites/characters/"+currentchar.chartype+'/'+x.name+'/slice_0_'+str(y)+'.png'
-			print(path)
+			#print(path)
 			var im=Image.new()
 			im.load(path)
 			var tex=ImageTexture.new()
