@@ -5,5 +5,5 @@ func _input(event):
 		
 		loader.loadscn("res://objects/main.tscn")
 
-#func _on_AnimationPlayer_animation_finished(anim_name):
-#	loader.loadscn("res://objects/main.tscn")
+func _on_AnimationPlayer_animation_finished(anim_name):
+	loader.loadscn("res://objects/main.tscn")
