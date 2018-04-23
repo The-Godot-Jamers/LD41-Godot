@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://models/godot-game-jammers.dae" type="PackedScene" id=1]
 [ext_resource path="res://objects/ggj_splash.gd" type="Script" id=2]
@@ -24,7 +24,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector3( 8.14228, 1.74521, 0.470842 ), Vector3( 4, 3, 0 ) ]
+"values": [ Vector3( 8.14228, 1.74521, 0.470842 ), Vector3( 4.08093, 3.93253, -2.24483 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Camera2:rotation_degrees")
@@ -36,7 +36,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector3( -16.7369, 42.0772, 5.32196 ), Vector3( -60, 0, 0 ) ]
+"values": [ Vector3( -16.7369, 42.0772, 5.32196 ), Vector3( -89.9802, 1.86693e-05, 1.86693e-05 ) ]
 }
 
 [sub_resource type="Environment" id=2]
@@ -131,6 +131,18 @@ subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
+[sub_resource type="DynamicFontData" id=5]
+
+font_path = "res://fonts/Ubuntu-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 28
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
 [node name="ggj_splash" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
@@ -144,11 +156,13 @@ _sections_unfolded = [ "Transform", "material" ]
 [node name="AnimationPlayer" parent="." index="1"]
 
 autoplay = "splash"
+playback_speed = 2.0
 anims/splash = SubResource( 1 )
+_sections_unfolded = [ "Playback Options" ]
 
 [node name="Camera2" type="Camera" parent="." index="2"]
 
-transform = Transform( 0.999999, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 4, 3, 0 )
+transform = Transform( 0.999999, -6.51682e-07, 1.12515e-10, 1.12515e-10, 0.000345305, 1, -6.51682e-07, -1, 0.000345305, 4.08093, 3.93253, -2.24483 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -162,29 +176,6 @@ size = 1.0
 near = 0.05
 far = 100.0
 _sections_unfolded = [ "Transform" ]
-
-[node name="SpotLight" type="SpotLight" parent="Camera2" index="0"]
-
-transform = Transform( 1, 0, 0, 0, 1, -5.96046e-08, 0, 5.96046e-08, 1, 0, -0.542226, -0.939163 )
-layers = 1
-light_color = Color( 1, 1, 1, 1 )
-light_energy = 0.6
-light_indirect_energy = 1.0
-light_negative = false
-light_specular = 0.5
-light_bake_mode = 1
-light_cull_mask = -1
-shadow_enabled = true
-shadow_color = Color( 0, 0, 0, 1 )
-shadow_bias = 0.15
-shadow_contact = 0.0
-shadow_reverse_cull_face = false
-editor_only = false
-spot_range = 5.5
-spot_attenuation = 1.0
-spot_angle = 75.2
-spot_angle_attenuation = 1.0
-_sections_unfolded = [ "Light", "Shadow", "Spot" ]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="3"]
 
@@ -237,12 +228,69 @@ cell_scale = 1.0
 collision_layer = 1
 collision_mask = 1
 data = {
-"cells": PoolIntArray( 4, 0, 0, 65535, 0, 0, 65540, 0, 0, 131071, 0, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 65535, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 131071, 1, 0, 0, 65532, 0, 1, 65532, 0, 2, 65532, 0, 3, 65532, 0, 4, 65532, 0, 65535, 65532, 0, 65536, 65532, 0, 65537, 65532, 0, 65538, 65532, 0, 65539, 65532, 0, 65540, 65532, 0, 131071, 65532, 0, 4, 65533, 0, 65535, 65533, 0, 65540, 65533, 0, 131071, 65533, 0, 4, 65534, 0, 65535, 65534, 0, 65540, 65534, 0, 131071, 65534, 0, 4, 65535, 0, 65535, 65535, 0, 65540, 65535, 0, 131071, 65535, 0 )
+"cells": PoolIntArray( 4, 0, 0, 65535, 0, 0, 65540, 0, 0, 131071, 0, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 65535, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 131071, 1, 0, 0, 65532, 536870912, 1, 65532, 0, 2, 65532, 0, 3, 65532, 0, 4, 65532, 0, 65535, 65532, 0, 65536, 65532, 0, 65537, 65532, 0, 65538, 65532, 0, 65539, 65532, 0, 65540, 65532, 0, 131071, 65532, 0, 4, 65533, 0, 65535, 65533, 0, 65540, 65533, 0, 131071, 65533, 0, 4, 65534, 0, 65535, 65534, 0, 65540, 65534, 0, 131071, 65534, 0, 4, 65535, 0, 65535, 65535, 0, 65540, 65535, 0, 131071, 65535, 0 )
 }
 __meta__ = {
 "_editor_clip_": 0,
 "_editor_floor_": Vector3( 0, 1, 0 )
 }
+
+[node name="DirectionalLight" type="SpotLight" parent="." index="7"]
+
+transform = Transform( 1, 0, 0, 0, -0.0621931, 0.998064, 0, -0.998064, -0.0621931, 3.98468, 5.43784, -2.62044 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 8.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.1
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+spot_range = 5.0
+spot_attenuation = 1.0
+spot_angle = 45.0
+spot_angle_attenuation = 1.0
+_sections_unfolded = [ "Directional Shadow", "Light", "Transform" ]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="8"]
+
+layer = 5
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="TextEdit" type="Label" parent="CanvasLayer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 426.0
+margin_top = 517.0
+margin_right = 605.0
+margin_bottom = 550.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.601562, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0.367188, 1, 1 )
+text = "Godot Jamers"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "custom_colors", "custom_fonts" ]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
