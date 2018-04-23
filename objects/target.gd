@@ -34,6 +34,8 @@ func shoot():
 		return
 	
 	$AnimationPlayer.play("death")
+	for x in $AnimatedSprite.get_children():
+		x.stop()
 	set_process_input(false)
 
 		
