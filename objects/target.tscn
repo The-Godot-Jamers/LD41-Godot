@@ -1,7 +1,6 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://objects/target.gd" type="Script" id=1]
-[ext_resource path="res://sprites/characters/female 1/body/slice_0_0.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=1]
 
@@ -14,7 +13,7 @@ tracks/0/path = NodePath("AnimatedSprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -38,7 +37,7 @@ tracks/2/path = NodePath("Area2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -134,7 +133,7 @@ height = 49.5852
 [sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
-"frames": [ null, ExtResource( 2 ) ],
+"frames": [ null ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -214,8 +213,7 @@ blend_times = [  ]
 [node name="Area2D" type="Area2D" parent="." index="1"]
 
 editor/display_folded = true
-position = Vector2( -54.9568, -18.6066 )
-rotation = -1.50499
+position = Vector2( -4.97083, -74.4733 )
 scale = Vector2( 0.2, 0.2 )
 z_index = 1
 input_pickable = true
@@ -236,13 +234,10 @@ shape = SubResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
 
-editor/display_folded = true
 position = Vector2( -1.32684, -23.2196 )
-rotation = -1.57097
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 4 )
 animation = "default"
-frame = 1
 offset = Vector2( 16.5593, -274.361 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 

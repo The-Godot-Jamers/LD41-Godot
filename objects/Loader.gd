@@ -6,6 +6,7 @@ extends Node2D
 var thread
 var scn
 func _ready():
+	thread=Thread.new()
 	$CanvasLayer/Sprite.position=get_viewport().get_texture().get_size()/2
 
 #func _process(delta):
@@ -16,6 +17,7 @@ func loadscn(path):
 	if $CanvasLayer/AnimationPlayer.is_playing():
 		pass
 	else:
+		#thread.start(self,'fadeloader',path)
 		fadeloader(path)
 func fadeloader(path):
 	scn=load(path)

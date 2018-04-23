@@ -23,7 +23,7 @@ func makechar(currentchar,target):
 			tex.create_from_image(im)
 			
 			x.frames.add_frame('walk',tex)
-	print(characters)
+	#print(characters)
 	colorchar(currentchar,target)
 	
 func colorchar(character,ob=self):
@@ -67,7 +67,7 @@ func makecardspr(currentchar,card):
 		var tex=ImageTexture.new()
 		tex.create_from_image(im)
 		x.texture=tex
-	print(characters)
+	#print(characters)
 	colorchar(currentchar,card.get_node('Area/MeshInstance/character'))
 	
 	

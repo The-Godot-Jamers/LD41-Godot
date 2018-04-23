@@ -39,7 +39,7 @@ func _input(event):
 			
 			audio_shot.play()
 
-	if event is InputEventMouseButton and event.is_pressed():
+	if Input.is_action_just_pressed("fire"):
 		audio_shot.play()
 	
 	#if event is InputEventMouseButton:
