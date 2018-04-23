@@ -58,7 +58,7 @@ tracks/3/keys = {
 "values": [ 0.0, -86.2296 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 
 resource_name = "walk"
 length = 5.0
@@ -125,25 +125,16 @@ tracks/4/keys = {
 "values": [ 0.0, 0.0, -12.1427, -10.2969 ]
 }
 
-[sub_resource type="CapsuleShape2D" id=10]
+[sub_resource type="CapsuleShape2D" id=3]
 
 custom_solver_bias = 0.0
 radius = 17.0911
 height = 49.5852
 
-[sub_resource type="SpriteFrames" id=11]
-
-animations = [ {
-"frames": [ null, ExtResource( 2 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
 [sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
-"frames": [  ],
+"frames": [ null, ExtResource( 2 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -194,6 +185,15 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="SpriteFrames" id=10]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [node name="target" type="Node2D" index="0"]
 
 position = Vector2( 37.7115, 2.34138 )
@@ -208,7 +208,7 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/death = SubResource( 1 )
-anims/walk = SubResource( 3 )
+anims/walk = SubResource( 2 )
 blend_times = [  ]
 
 [node name="Area2D" type="Area2D" parent="." index="1"]
@@ -232,7 +232,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 position = Vector2( -8.39827, -100.376 )
 rotation = 0.078043
 scale = Vector2( 5, 5 )
-shape = SubResource( 10 )
+shape = SubResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
 
@@ -240,7 +240,7 @@ editor/display_folded = true
 position = Vector2( -1.32684, -23.2196 )
 rotation = -1.57097
 scale = Vector2( 0.2, 0.2 )
-frames = SubResource( 11 )
+frames = SubResource( 4 )
 animation = "default"
 frame = 1
 offset = Vector2( 16.5593, -274.361 )
@@ -249,37 +249,37 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="body" type="AnimatedSprite" parent="AnimatedSprite" index="0"]
 
 position = Vector2( 16.5593, -274.361 )
-frames = SubResource( 4 )
+frames = SubResource( 5 )
 animation = "default"
 
 [node name="hair" type="AnimatedSprite" parent="AnimatedSprite" index="1"]
 
 position = Vector2( 16.5593, -274.361 )
-frames = SubResource( 5 )
+frames = SubResource( 6 )
 animation = "default"
 
 [node name="shoes" type="AnimatedSprite" parent="AnimatedSprite" index="2"]
 
 position = Vector2( 16.5593, -274.361 )
-frames = SubResource( 6 )
+frames = SubResource( 7 )
 animation = "default"
 
 [node name="shirt" type="AnimatedSprite" parent="AnimatedSprite" index="3"]
 
 position = Vector2( 16.5593, -274.361 )
-frames = SubResource( 7 )
+frames = SubResource( 8 )
 animation = "default"
 
 [node name="pant" type="AnimatedSprite" parent="AnimatedSprite" index="4"]
 
 position = Vector2( 16.5593, -274.361 )
-frames = SubResource( 8 )
+frames = SubResource( 9 )
 animation = "default"
 
 [node name="cap" type="AnimatedSprite" parent="AnimatedSprite" index="5"]
 
 position = Vector2( 16.5593, -274.361 )
-frames = SubResource( 9 )
+frames = SubResource( 10 )
 animation = "default"
 
 [node name="Timer" type="Timer" parent="." index="3"]
@@ -288,5 +288,7 @@ process_mode = 1
 wait_time = 1.0
 one_shot = true
 autostart = false
+
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
 
 
