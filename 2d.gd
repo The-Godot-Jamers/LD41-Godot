@@ -21,7 +21,7 @@ func _ready():
 	_on_card_shoot(0)
 
 func _process(delta):
-	$UI/MarginContainer/VBoxContainer/Label.text = "Targets " + str(Globals.targets.size())
+	$UI/Label.text = "Targets " + str(Globals.targets.size())
 func _on_card_shoot(index):
 	current_target = targets_array[index]
 	crosshair.show()

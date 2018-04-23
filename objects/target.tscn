@@ -128,7 +128,7 @@ tracks/4/keys = {
 
 custom_solver_bias = 0.0
 radius = 17.0911
-height = 49.5852
+height = 10.0
 
 [sub_resource type="SpriteFrames" id=4]
 
@@ -213,6 +213,7 @@ blend_times = [  ]
 [node name="Area2D" type="Area2D" parent="." index="1"]
 
 position = Vector2( -4.97083, -74.4733 )
+rotation = -1.50499
 scale = Vector2( 0.2, 0.2 )
 z_index = 1
 input_pickable = true
@@ -226,7 +227,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="HitBox" type="CollisionShape2D" parent="Area2D" index="0"]
 
-position = Vector2( -8.39827, -100.376 )
+position = Vector2( -13.9877, -185.192 )
 rotation = 0.078043
 scale = Vector2( 5, 5 )
 shape = SubResource( 3 )
@@ -234,6 +235,7 @@ shape = SubResource( 3 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
 
 position = Vector2( -1.32684, -23.2196 )
+rotation = -1.57097
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 4 )
 animation = "default"

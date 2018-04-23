@@ -4,7 +4,7 @@ var card_num=16
 var card_scene
 var cards_ins
 var show_card
-var delay=5 #delay before fliping cards
+var delay=1.5 #delay before fliping cards
 var cardsselection=10 setget cardselect
 
 func _ready():
