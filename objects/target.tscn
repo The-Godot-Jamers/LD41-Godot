@@ -214,7 +214,8 @@ blend_times = [  ]
 [node name="Area2D" type="Area2D" parent="." index="1"]
 
 editor/display_folded = true
-position = Vector2( -4.97083, -74.4733 )
+position = Vector2( -54.9568, -18.6066 )
+rotation = -1.50499
 scale = Vector2( 0.2, 0.2 )
 z_index = 1
 input_pickable = true
@@ -237,9 +238,11 @@ shape = SubResource( 10 )
 
 editor/display_folded = true
 position = Vector2( -1.32684, -23.2196 )
+rotation = -1.57097
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 11 )
 animation = "default"
+frame = 1
 offset = Vector2( 16.5593, -274.361 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 

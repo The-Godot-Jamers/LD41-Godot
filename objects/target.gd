@@ -30,8 +30,20 @@ func shoot():
 		return
 	
 	$AnimationPlayer.play("death")
+<<<<<<< HEAD
+=======
+	for x in $AnimatedSprite.get_children():
+		x.stop()
+	set_process_input(false)
+>>>>>>> master
 
 		
 func changeid(nid):
 	id=nid
 	CharacterGenerator.makechar(CharacterGenerator.characters[nid],get_node("AnimatedSprite"))
+
+
+func _on_Area2D_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton:
+		shoot()
+		
