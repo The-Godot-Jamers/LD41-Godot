@@ -17,7 +17,6 @@ func loadscn(path):
 	if $CanvasLayer/AnimationPlayer.is_playing():
 		pass
 	else:
-		#thread.start(self,'fadeloader',path)
 		fadeloader(path)
 func fadeloader(path):
 	scn=load(path)
