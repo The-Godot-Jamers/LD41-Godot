@@ -3,7 +3,7 @@ extends Node2D
 var characters=[]
 var bodycolor='lightpink'
 var allowed_colors=['gold','aqua','orangered','violet','wheat','black']
-var availablechars=['female 1', 'female 2']
+var availablechars=['female 1', 'female 2','male_1']
 
 func _ready():
 	charsetgen(15)
@@ -59,6 +59,8 @@ func chargen():
 			currentchar[x]=ColorN(allowed_colors[randi()%allowed_colors.size()])
 		else:
 			currentchar[x]=ColorN(bodycolor)
+	if currentchar.chartype=='male_1':
+		currentchar['cap']=Color(0,0,0,0)
 	return currentchar
 	
 func makecardspr(currentchar,card):
