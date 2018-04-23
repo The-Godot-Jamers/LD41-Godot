@@ -17,6 +17,7 @@ func spawn_deck(cards):
 	cards_ins=[]
 		#show card
 	show_card=card_scene.instance()
+	show_card.tablehandler=self
 	$CameraPivot/Camera.add_child(show_card)
 	show_card.flippable = false
 	show_card.translation = Vector3(0.0,-0.3,-0.25)
@@ -35,8 +36,11 @@ func spawn_deck(cards):
 		#card_instance.flip()
 		card_instance.show_card = show_card
 		card_instance.connect("hide",show_card,"hide")
+		#card_instance.connect("hide",self,"hide")
+		
 		card_instance.characterid=x
 		card_instance.connect("show",show_card,"show",[card_instance.characterid])
+		#card_instance.connect("show",self,"show",[card_instance.characterid])
 		CharacterGenerator.makecardspr(CharacterGenerator.characters[x],card_instance)
 	position_cards(cards)
 	
@@ -71,6 +75,9 @@ func wait():
 	yield(t, "timeout")
 	flipcards()
 	return
+	
+func flip_card(cardid):
+	cards_ins[cardid].flip()
 
 func get_points_within_circle_rect( npoints, radius ):
     if npoints == 1:
@@ -109,3 +116,9 @@ func get_points_within_circle_rect( npoints, radius ):
             break
     return points
 
+func show(cardid):
+	for x in $CardLaybed/CardHolder.get_children():
+		x.flippable=false
+func hide():
+	for x in $CardLaybed/CardHolder.get_children():
+		x.flippable=true

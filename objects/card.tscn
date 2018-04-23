@@ -260,7 +260,7 @@ resource_local_to_scene = true
 extents = Vector3( 0.5, 0.025, 0.75 )
 _sections_unfolded = [ "Resource" ]
 
-[node name="card" type="Spatial" index="0"]
+[node name="card" type="Spatial"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
