@@ -9,7 +9,7 @@ path="res://.import/room.obj-8af8bcff38f6c81d6cfa744184db14cf.mesh"
 files=[ "res://.import/room.obj-8af8bcff38f6c81d6cfa744184db14cf.mesh" ]
 
 source_file="res://objects/room.obj"
-source_md5="945737445e06971f7097fce6a06a7ae6"
+source_md5="ae552c416d8cfe785fb39f20c943fe00"
 
 dest_files=[ "res://.import/room.obj-8af8bcff38f6c81d6cfa744184db14cf.mesh", "res://.import/room.obj-8af8bcff38f6c81d6cfa744184db14cf.mesh" ]
 dest_md5="b5b78f8f9f4b6b7a0053b80c22d47e39"

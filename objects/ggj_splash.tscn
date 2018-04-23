@@ -143,7 +143,7 @@ use_filter = false
 font_data = SubResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="ggj_splash" index="0" instance=ExtResource( 1 )]
+[node name="ggj_splash" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
