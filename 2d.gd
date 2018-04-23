@@ -9,6 +9,7 @@ var current_target
 onready var spawn_area = $Node2D/Ground/SpawnArea
 onready var crosshair = $Node2D/Player/Crosshair
 onready var crosshair_area = $Node2D/Player/Crosshair/Area2D
+onready var audio_shot = $Node2D/Player/Crosshair/Area2D/AudioShoot
 
 func _ready():
 	targets=Globals.characterno
@@ -36,7 +37,7 @@ func _input(event):
 			for t in targets_in_line:
 				most_front_id = max(most_front_id, t.id)
 			
-			$AudioStreamPlayer.play()
+			audio_shot.play()
 			targets_array[most_front_id].shoot()
 
 func _on_crosshair_arena_enter(area):

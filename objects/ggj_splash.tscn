@@ -132,7 +132,7 @@ subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-[node name="ggj_splash" index="0" instance=ExtResource( 1 )]
+[node name="ggj_splash" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
