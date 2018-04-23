@@ -8,3 +8,4 @@ func _ready():
 func setlevel(lvl):
 	characterno=pow((2+lvl),2)
 	CharacterGenerator.charsetgen(characterno)
+	level=lvl

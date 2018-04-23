@@ -5,12 +5,16 @@ var card_scene
 var cards_ins
 var show_card
 var delay=5 #delay before fliping cards
+var cardsselection=10 setget cardselect
+
 func _ready():
 	card_scene=load("res://objects/card.tscn")
 
 
 func spawn_deck(cards):
 	cards=Globals.characterno
+	cardselect(Globals.level)
+	$"UI/Level indicator".show()
 	var spawnpos=$CardLaybed/DeckPosition.global_transform
 	
 	#Cleaning cards if exist
@@ -122,3 +126,18 @@ func show(cardid):
 func hide():
 	for x in $CardLaybed/CardHolder.get_children():
 		x.flippable=true
+
+func cardselect(val):
+	$"UI/Level indicator".text="Select "+str(val)+" Card"
+	cardsselection=val
+	if val==0:
+		var tim=Timer.new()
+		add_child(tim)
+		tim.wait_time=1
+		tim.one_shot=true
+		for x in range(15,0,-1):
+			tim.start()
+			$"UI/Level indicator".text="Shooting Start in "+str(x)+" seconds!"
+			yield(tim,"timeout")
+			
+		loader.loadscn("res://2d.tscn")

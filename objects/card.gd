@@ -73,6 +73,7 @@ func _on_accept_pressed():
 	tablehandler.cards_ins[characterid].lockcard()
 	tablehandler.cards_ins[characterid].flippable=false
 	unlockall()
+	tablehandler.cardsselection-=1
 func _on_put_down_pressed():
 	#tablehandler.flip_card(characterid)
 	tablehandler.cards_ins[characterid].flip()
