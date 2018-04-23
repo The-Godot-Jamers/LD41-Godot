@@ -66,6 +66,7 @@ tracks/1/keys = {
 [node name="CameraPivot" type="Position3D"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.8145, 0 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Camera" type="Camera" parent="." index="0"]
 
