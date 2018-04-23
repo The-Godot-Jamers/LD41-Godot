@@ -26,6 +26,8 @@ func _on_anim_finish(anim_name):
 		if id == Globals.targets[i]:
 			Globals.targets.remove(i)
 			if Globals.targets.size() == 0:
+				Globals.level+=1
+				Globals.autoplay=true
 				loader.loadscn("res://3d.tscn")
 			break
 		else:

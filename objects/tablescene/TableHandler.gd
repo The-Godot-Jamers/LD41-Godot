@@ -9,7 +9,8 @@ var cardsselection=10 setget cardselect
 
 func _ready():
 	card_scene=load("res://objects/card.tscn")
-
+	if Globals.autoplay:
+		spawn_deck(0)
 
 func spawn_deck(cards):
 	cards=Globals.characterno
@@ -131,6 +132,7 @@ func cardselect(val):
 	$"UI/Level indicator".text="Select "+str(val)+" Card"
 	cardsselection=val
 	if val==0:
+		show_card.lockall()
 		var tim=Timer.new()
 		add_child(tim)
 		tim.wait_time=1
