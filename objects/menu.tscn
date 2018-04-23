@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://objects/menu.gd" type="Script" id=1]
-[ext_resource path="res://sprites/UI/brown_button1.png" type="Texture" id=2]
-[ext_resource path="res://sprites/UI/brown_button2.png" type="Texture" id=3]
-[ext_resource path="res://sounds/shuffle0.wav" type="AudioStream" id=4]
-[ext_resource path="res://sounds/lay0.wav" type="AudioStream" id=5]
+[ext_resource path="res://sounds/shuffle0.wav" type="AudioStream" id=2]
+[ext_resource path="res://sounds/lay0.wav" type="AudioStream" id=3]
 
 [node name="menu" type="CanvasLayer" index="0"]
 
@@ -79,215 +77,17 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
-[node name="StartButton" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="1"]
+[node name="shuffle_sound" type="AudioStreamPlayer" parent="ui/CenterContainer/VBoxContainer" index="1"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 190.0
-margin_bottom = 49.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
-
-[node name="start" type="TextureButton" parent="ui/CenterContainer/VBoxContainer/StartButton" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 190.0
-margin_bottom = 49.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 2 )
-texture_disabled = ExtResource( 2 )
-texture_focused = ExtResource( 2 )
-_sections_unfolded = [ "Textures", "Visibility" ]
-
-[node name="Label" type="Label" parent="ui/CenterContainer/VBoxContainer/StartButton" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 80.0
-margin_top = 17.0
-margin_right = 109.0
-margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Start"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect" ]
-
-[node name="OptionsButton" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 53.0
-margin_right = 190.0
-margin_bottom = 102.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
-
-[node name="options" type="TextureButton" parent="ui/CenterContainer/VBoxContainer/OptionsButton" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 190.0
-margin_bottom = 49.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 2 )
-texture_disabled = ExtResource( 2 )
-texture_focused = ExtResource( 2 )
-_sections_unfolded = [ "Textures", "Visibility" ]
-
-[node name="Label" type="Label" parent="ui/CenterContainer/VBoxContainer/OptionsButton" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 69.0
-margin_top = 17.0
-margin_right = 120.0
-margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Options"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect" ]
-
-[node name="QuitButton" type="CenterContainer" parent="ui/CenterContainer/VBoxContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 106.0
-margin_right = 190.0
-margin_bottom = 155.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
-
-[node name="quit" type="TextureButton" parent="ui/CenterContainer/VBoxContainer/QuitButton" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 190.0
-margin_bottom = 49.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 2 )
-texture_disabled = ExtResource( 2 )
-texture_focused = ExtResource( 2 )
-stretch_mode = 4
-_sections_unfolded = [ "Mouse", "Rect", "Textures", "Visibility" ]
-
-[node name="Label" type="Label" parent="ui/CenterContainer/VBoxContainer/QuitButton" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 81.0
-margin_top = 17.0
-margin_right = 109.0
-margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Quit"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect" ]
-
-[node name="shuffle_sound" type="AudioStreamPlayer" parent="ui/CenterContainer/VBoxContainer" index="4"]
-
-stream = ExtResource( 4 )
+stream = ExtResource( 2 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="click" type="AudioStreamPlayer" parent="ui/CenterContainer/VBoxContainer" index="5"]
+[node name="click" type="AudioStreamPlayer" parent="ui/CenterContainer/VBoxContainer" index="2"]
 
-stream = ExtResource( 5 )
+stream = ExtResource( 3 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
