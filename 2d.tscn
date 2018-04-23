@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://2d.gd" type="Script" id=1]
 [ext_resource path="res://objects/tileset.tres" type="TileSet" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://sprites/ugly_bg.png" type="Texture" id=5]
 [ext_resource path="res://sprites/crosshair_mask.png" type="Texture" id=6]
 [ext_resource path="res://sounds/snipershot0.wav" type="AudioStream" id=7]
+[ext_resource path="res://objects/failed.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Animation" id=1]
 
@@ -53,7 +54,7 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="2d" type="Node2D" index="0"]
+[node name="2d" type="Node2D"]
 
 script = ExtResource( 1 )
 targets = 16
@@ -267,5 +268,11 @@ bus = "Master"
 [node name="CharacterHolder" type="YSort" parent="." index="2"]
 
 sort_enabled = true
+
+[node name="failed" parent="." index="3" instance=ExtResource( 8 )]
+
+margin_right = 1024.0
+margin_bottom = 600.0
+_sections_unfolded = [ "Anchor", "Margin", "Material", "Mouse" ]
 
 
