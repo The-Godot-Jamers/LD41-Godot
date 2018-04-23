@@ -129,7 +129,7 @@ func hide():
 		x.flippable=true
 
 func cardselect(val):
-	$"UI/Level indicator".text="Select "+str(val)+" Card"
+	$"UI/Level indicator".set_text("Select "+str(val)+" Card")
 	cardsselection=val
 	if val==0:
 		show_card.lockall()
@@ -137,9 +137,9 @@ func cardselect(val):
 		add_child(tim)
 		tim.wait_time=1
 		tim.one_shot=true
-		for x in range(10,0,-1):
+		for x in range(3,0,-1):
 			tim.start()
-			$"UI/Level indicator".text="Shooting Start in "+str(x)+" seconds!"
+			$"UI/Level indicator".set_text("Shooting Start in "+str(x)+" seconds!")
 			yield(tim,"timeout")
 			
 		loader.loadscn("res://2d.tscn")
