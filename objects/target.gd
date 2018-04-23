@@ -42,3 +42,9 @@ func shoot():
 func changeid(nid):
 	id=nid
 	CharacterGenerator.makechar(CharacterGenerator.characters[nid],get_node("AnimatedSprite"))
+
+
+func _on_Area2D_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton:
+		shoot()
+		

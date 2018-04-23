@@ -13,8 +13,8 @@ onready var crosshair_area = $Node2D/Player/Crosshair/Area2D
 func _ready():
 	targets=Globals.characterno
 	# connet to right signal
-	crosshair_area.connect("area_entered", self, "_on_crosshair_arena_enter")
-	crosshair_area.connect("area_exited", self, "_on_crosshair_arena_exit")
+	#crosshair_area.connect("area_entered", self, "_on_crosshair_arena_enter")
+	#crosshair_area.connect("area_exited", self, "_on_crosshair_arena_exit")
 	spawn_area.hide()
 	spawn_targets(targets)
 	_on_card_shoot(0)
@@ -27,17 +27,20 @@ func _input(event):
 	if !crosshair.visible:
 		return
 		
-	if event is InputEventMouse:
+	if event is InputEventMouseMotion:
 		crosshair.global_position = event.global_position
 	
-	if event is InputEventMouseButton:
-		if event.button_index == BUTTON_LEFT:
-			var most_front_id = 0
-			for t in targets_in_line:
-				most_front_id = max(most_front_id, t.id)
-			
-			$AudioStreamPlayer.play()
-			targets_array[most_front_id].shoot()
+	if event is InputEventMouseButton and event.is_pressed():
+		$AudioStreamPlayer.play()
+	
+	#if event is InputEventMouseButton:
+	#	if event.button_index == BUTTON_LEFT:
+	#		var most_front_id = 0
+	#		for t in targets_in_line:
+	#			most_front_id = max(most_front_id, t.id)
+	#		
+	#		$AudioStreamPlayer.play()
+	#		targets_array[most_front_id].shoot()
 
 func _on_crosshair_arena_enter(area):
 	var o = area.owner

@@ -213,9 +213,7 @@ blend_times = [  ]
 
 [node name="Area2D" type="Area2D" parent="." index="1"]
 
-editor/display_folded = true
-position = Vector2( -53.4003, 36.3174 )
-rotation = -1.52105
+position = Vector2( -3.96359, -73.9864 )
 scale = Vector2( 0.2, 0.2 )
 z_index = 1
 input_pickable = true
@@ -236,8 +234,7 @@ shape = SubResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
 
-position = Vector2( 1.00177, 32.7813 )
-rotation = -1.5708
+position = Vector2( -1.32684, -23.2196 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 4 )
 animation = "default"
@@ -286,5 +283,7 @@ process_mode = 1
 wait_time = 1.0
 one_shot = true
 autostart = false
+
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
 
 
