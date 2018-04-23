@@ -25,12 +25,15 @@ func flip_back():
 	
 
 func show(charid):
-	print("show")
+	#print("show")
+	$selection.show()
+	characterid = charid
 	CharacterGenerator.makecardspr(CharacterGenerator.characters[charid],self)
 	$Tween.interpolate_property(self,"translation",Vector3(0.0,-0.3,-0.25),Vector3(0.0,-0.1,-0.25),1.0,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	$Tween.start()
 func hide():
-	print("hide")
+	$selection.show()
+	#print("hide")
 	$Tween.interpolate_property(self,"translation",Vector3(0.0,-0.1,-0.25),Vector3(0.0,-0.3,-0.25),1.0,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	$Tween.start()
 func _on_Area_input_event(camera, event, click_position, click_normal, shape_idx):
@@ -57,3 +60,15 @@ func _on_Area_mouse_exited():
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	flipping = false
+
+
+func _on_accept_pressed():
+	Globals.targets.append(characterid)
+	print(Globals.targets)
+	$Tween.interpolate_property(self,"translation",Vector3(0.0,-0.1,-0.25),Vector3(0.0,-0.3,-0.25),1.0,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
+	$selection.hide()
+	flip_back()
+func _on_put_down_pressed():
+	flip_back()
+	$Tween.interpolate_property(self,"translation",Vector3(0.0,-0.1,-0.25),Vector3(0.0,-0.3,-0.25),1.0,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
+	$selection.hide()
