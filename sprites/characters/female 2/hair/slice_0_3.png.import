@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/slice_0_3.png-f432b069f17a78d1e55f2e7e4366a2f4.stex"
+
+[deps]
+
+source_file="res://sprites/characters/female 2/hair/slice_0_3.png"
+source_md5="8ac38003c728cc093189821ab74f5aa0"
+
+dest_files=[ "res://.import/slice_0_3.png-f432b069f17a78d1e55f2e7e4366a2f4.stex" ]
+dest_md5="b8a22e1c4aa216647cbd6222b3f44de0"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

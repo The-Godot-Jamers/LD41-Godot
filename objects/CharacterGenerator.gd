@@ -3,20 +3,20 @@ extends Node2D
 var characters=[]
 var bodycolor='lightpink'
 var allowed_colors=['gold','aqua','orangered','violet','wheat','black']
-var availablechars=['female 1']
+var availablechars=['female 1', 'female 2']
 
 func _ready():
 	charsetgen(15)
 
 
 func makechar(currentchar,target):
-	
+	print(currentchar)
 	for x in target.get_children():
 		x.frames.clear_all()
 		x.frames.add_animation('walk')
 		for y in range(8):
 			var path="res://sprites/characters/"+currentchar.chartype+'/'+x.name+'/slice_0_'+str(y)+'.png'
-			#print(path)
+			print(path)
 			var im=Image.new()
 			im.load(path)
 			var tex=ImageTexture.new()

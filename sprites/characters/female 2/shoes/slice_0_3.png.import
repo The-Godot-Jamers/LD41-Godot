@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/slice_0_3.png-51344ea196c78b4fa07bab1b7c5e8c06.stex"
+
+[deps]
+
+source_file="res://sprites/characters/female 2/shoes/slice_0_3.png"
+source_md5="cb1e6ca95877323a3eb9c367bea06810"
+
+dest_files=[ "res://.import/slice_0_3.png-51344ea196c78b4fa07bab1b7c5e8c06.stex" ]
+dest_md5="fca71a2357e2ece947e28208d02ba13b"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
