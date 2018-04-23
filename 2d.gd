@@ -21,7 +21,7 @@ func _ready():
 	_on_card_shoot(0)
 
 func _process(delta):
-	$UI/MarginContainer/VBoxContainer/Label.text = "Targets " + str(Globals.targets.size())
+	$UI/VBoxContainer/Label.text = "Targets " + str(Globals.targets.size())
 func _on_card_shoot(index):
 	current_target = targets_array[index]
 	crosshair.show()
@@ -104,6 +104,7 @@ func spawn_targets(number):
 		target.global_position=pos
 		#print(spawn_area.position)
 		$CharacterHolder.add_child(target)
+		target.connect("death",self,"character_killed")
 		targets_array.append(target)
 		
 func randompoint():
@@ -126,4 +127,15 @@ func random_pos_in_spawn_Area_new():
 				f=false
 				break
 	return p
+
+func character_killed(id):
+	$UI/failed.show()
+	$Node2D/Player/Crosshair.hide()
 	
+
+
+
+
+
+
+

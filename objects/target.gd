@@ -3,7 +3,8 @@ extends Node2D
 var id = 0
 var mouse_in = false
 var death = false
-
+signal death
+ 
 func _ready():
 #	randomize()
 #	var r = rand_range(0, 1)
@@ -31,7 +32,7 @@ func _on_anim_finish(anim_name):
 				loader.loadscn("res://3d.tscn")
 			break
 		else:
-			print("boo")
+			emit_signal("death",id)
 
 func shoot():
 	if death:
