@@ -6,7 +6,7 @@
 [ext_resource path="res://sounds/shuffle0.wav" type="AudioStream" id=4]
 [ext_resource path="res://sounds/lay0.wav" type="AudioStream" id=5]
 
-[node name="menu" type="CanvasLayer"]
+[node name="menu" type="CanvasLayer" index="0"]
 
 pause_mode = 2
 layer = 1
