@@ -23,8 +23,11 @@ func _on_anim_finish(anim_name):
 	if anim_name == "death":
 		death = true
 	for i in Globals.targets.size():
+		print(Globals.targets[i])
 		if id == Globals.targets[i]:
-			print("yay")
+			Globals.targets.remove(i)
+			print(Globals.targets)
+			break
 		else:
 			print("boo")
 
