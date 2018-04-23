@@ -7,8 +7,11 @@ var show_card
 var delay=1.5 #delay before fliping cards
 var cardsselection=10 setget cardselect
 
+var cards = load("res://objects/card.tscn")
+
+
 func _ready():
-	card_scene=load("res://objects/card.tscn")
+	card_scene=cards
 	if Globals.autoplay:
 		spawn_deck(0)
 
@@ -142,5 +145,5 @@ func cardselect(val):
 			$"UI/Level indicator".set_text("Shooting Start in "+str(x)+" seconds!")
 			yield(tim,"timeout")
 			
-		loader.loadscn("res://2d.tscn")
+		loader.loadscn("_2d")
 

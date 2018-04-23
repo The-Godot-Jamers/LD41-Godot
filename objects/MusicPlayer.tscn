@@ -9,7 +9,7 @@ stream = ExtResource( 1 )
 volume_db = 5.0
 autoplay = false
 mix_target = 0
-bus = "Music"
+bus = "Master"
 script = ExtResource( 2 )
 
 [connection signal="finished" from="." to="." method="_on_music_finished"]

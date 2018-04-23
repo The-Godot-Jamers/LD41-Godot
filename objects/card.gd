@@ -66,7 +66,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 func _on_accept_pressed():
 	Globals.targets.append(characterid)
-	print(Globals.targets)
+	#print(Globals.targets)
 	$Tween.interpolate_property(self,"translation",Vector3(0.0,-0.1,-0.25),Vector3(0.0,-0.3,-0.25),1.0,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	$selection.hide()
 	flip_back()

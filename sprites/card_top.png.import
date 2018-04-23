@@ -2,26 +2,25 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/card_top.png-275576002799e7e2df8bc063c913d8e7.s3tc.stex"
-path.etc2="res://.import/card_top.png-275576002799e7e2df8bc063c913d8e7.etc2.stex"
+path="res://.import/card_top.png-275576002799e7e2df8bc063c913d8e7.stex"
 
 [deps]
 
 source_file="res://sprites/card_top.png"
 source_md5="79832d9217d13baf56491794ec3182af"
 
-dest_files=[ "res://.import/card_top.png-275576002799e7e2df8bc063c913d8e7.s3tc.stex", "res://.import/card_top.png-275576002799e7e2df8bc063c913d8e7.etc2.stex" ]
-dest_md5="c7879e64ef6f914d1680e0dde3003209"
+dest_files=[ "res://.import/card_top.png-275576002799e7e2df8bc063c913d8e7.stex" ]
+dest_md5="b83ea26b3a8a9d762449ec412e455954"
 
 [params]
 
-compress/mode=2
-compress/lossy_quality=0.7
+compress/mode=3
+compress/lossy_quality=0.0
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
-flags/mipmaps=true
+flags/filter=false
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

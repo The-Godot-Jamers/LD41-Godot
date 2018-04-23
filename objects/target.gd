@@ -28,10 +28,11 @@ func _on_anim_finish(anim_name):
 			if Globals.targets.size() == 0:
 				Globals.level+=1
 				Globals.autoplay=true
-				loader.loadscn("res://3d.tscn")
+				loader.loadscn("_3d")
 			break
 		else:
-			print("boo")
+			#print("boo")
+			pass
 
 func shoot():
 	if death:

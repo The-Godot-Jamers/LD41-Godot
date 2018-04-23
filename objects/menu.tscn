@@ -4,7 +4,7 @@
 [ext_resource path="res://sounds/shuffle0.wav" type="AudioStream" id=2]
 [ext_resource path="res://sounds/lay0.wav" type="AudioStream" id=3]
 
-[node name="menu" type="CanvasLayer" index="0"]
+[node name="menu" type="CanvasLayer"]
 
 pause_mode = 2
 layer = 1
@@ -54,10 +54,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 389.0
-margin_top = 202.0
-margin_right = 579.0
-margin_bottom = 357.0
+margin_left = 484.0
+margin_top = 280.0
+margin_right = 484.0
+margin_bottom = 280.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
