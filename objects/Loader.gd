@@ -16,8 +16,7 @@ func loadscn(path):
 	if $CanvasLayer/AnimationPlayer.is_playing():
 		pass
 	else:
-		thread=Thread.new()
-		thread.start(self,'fadeloader',path)
+		fadeloader(path)
 func fadeloader(path):
 	scn=load(path)
 	var t=get_viewport().get_texture().get_data()
