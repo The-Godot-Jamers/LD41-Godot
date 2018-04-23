@@ -143,3 +143,4 @@ func cardselect(val):
 			yield(tim,"timeout")
 			
 		loader.loadscn("res://2d.tscn")
+

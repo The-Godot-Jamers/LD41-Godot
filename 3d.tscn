@@ -330,7 +330,6 @@ script = ExtResource( 7 )
 
 [node name="Level indicator" type="Label" parent="UI" index="1"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0

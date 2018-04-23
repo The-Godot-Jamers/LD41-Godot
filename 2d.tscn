@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://2d.gd" type="Script" id=1]
 [ext_resource path="res://objects/tileset.tres" type="TileSet" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://sprites/ugly_bg.png" type="Texture" id=5]
 [ext_resource path="res://sprites/crosshair_mask.png" type="Texture" id=6]
 [ext_resource path="res://sounds/snipershot0.wav" type="AudioStream" id=7]
-[ext_resource path="res://objects/failed.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Animation" id=1]
 
@@ -61,7 +60,6 @@ targets = 16
 
 [node name="UI" type="Control" parent="." index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -118,6 +116,25 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 387.0
 margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="failed" type="Label" parent="UI/MarginContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 387.0
+margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -268,11 +285,5 @@ bus = "Master"
 [node name="CharacterHolder" type="YSort" parent="." index="2"]
 
 sort_enabled = true
-
-[node name="failed" parent="." index="3" instance=ExtResource( 8 )]
-
-margin_right = 1024.0
-margin_bottom = 600.0
-_sections_unfolded = [ "Anchor", "Margin", "Material", "Mouse" ]
 
 
