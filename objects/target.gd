@@ -19,8 +19,14 @@ func _ready():
 	$AnimationPlayer.connect("animation_finished", self, "_on_anim_finish")
 
 func _on_anim_finish(anim_name):
+	
 	if anim_name == "death":
 		death = true
+	for i in Globals.targets.size():
+		if id == Globals.targets[i]:
+			print("yay")
+		else:
+			print("boo")
 
 func shoot():
 	if death:
