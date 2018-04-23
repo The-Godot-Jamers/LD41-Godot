@@ -1,4 +1,30 @@
-[gd_resource type="AudioBusLayout" format=2]
+[gd_resource type="AudioBusLayout" load_steps=3 format=2]
+
+[sub_resource type="AudioEffectChorus" id=1]
+
+resource_name = "Chorus"
+voice_count = 2
+dry = 1.0
+wet = 0.5
+voice/1/delay_ms = 15.0
+voice/1/rate_hz = 0.8
+voice/1/depth_ms = 2.0
+voice/1/level_db = 0.0
+voice/1/cutoff_hz = 8000.0
+voice/1/pan = -0.5
+voice/2/delay_ms = 20.0
+voice/2/rate_hz = 1.2
+voice/2/depth_ms = 3.0
+voice/2/level_db = 0.0
+voice/2/cutoff_hz = 8000.0
+voice/2/pan = 0.5
+
+[sub_resource type="AudioEffectStereoEnhance" id=2]
+
+resource_name = "StereoEnhance"
+pan_pullout = 1.0
+time_pullout_ms = 0.0
+surround = 0.0
 
 [resource]
 
@@ -8,4 +34,14 @@ bus/0/mute = false
 bus/0/bypass_fx = false
 bus/0/volume_db = -10.3
 bus/0/send = ""
+bus/1/name = "Music"
+bus/1/solo = true
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 3.6
+bus/1/send = "Master"
+bus/1/effect/0/effect = SubResource( 1 )
+bus/1/effect/0/enabled = true
+bus/1/effect/1/effect = SubResource( 2 )
+bus/1/effect/1/enabled = true
 

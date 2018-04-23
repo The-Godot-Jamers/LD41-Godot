@@ -53,7 +53,7 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="2d" type="Node2D" index="0"]
+[node name="2d" type="Node2D"]
 
 script = ExtResource( 1 )
 targets = 16
@@ -106,6 +106,7 @@ polygon = PoolVector2Array( 84.6884, -48.2275, 59.6491, -49.5179, -14.1093, -47.
 
 [node name="Player" type="Node2D" parent="Node2D" index="2"]
 
+editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Player" index="0"]
@@ -143,8 +144,10 @@ texture = ExtResource( 5 )
 
 [node name="Crosshair" type="Light2D" parent="Node2D/Player" index="4"]
 
+editor/display_folded = true
 show_behind_parent = true
-position = Vector2( 503, 511 )
+position = Vector2( 511.412, 490.068 )
+scale = Vector2( 1.05424, 1.05424 )
 enabled = true
 editor_only = false
 texture = ExtResource( 6 )

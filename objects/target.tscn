@@ -193,7 +193,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="target" type="Node2D" index="0"]
+[node name="target" type="Node2D"]
 
 position = Vector2( 37.7115, 2.34138 )
 script = ExtResource( 1 )
@@ -212,7 +212,6 @@ blend_times = [  ]
 
 [node name="Area2D" type="Area2D" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( -4.97083, -74.4733 )
 scale = Vector2( 0.2, 0.2 )
 z_index = 1
